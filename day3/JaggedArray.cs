@@ -8,6 +8,7 @@ class JaggedArray
     {
         int noOfStudent = 3;
         //  string[,] sName = new string[5,2];
+
         string[] sName = new string[noOfStudent];
         string[][] studentSubject = new string[noOfStudent][];
 
