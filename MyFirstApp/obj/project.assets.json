@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\wipro training\\MyFirstApp\\MyFirstApp.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Wipro-training\\MyFirstApp\\MyFirstApp.csproj",
       "projectName": "MyFirstApp",
-      "projectPath": "C:\\Users\\HP\\Desktop\\wipro training\\MyFirstApp\\MyFirstApp.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\Wipro-training\\MyFirstApp\\MyFirstApp.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\wipro training\\MyFirstApp\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\Wipro-training\\MyFirstApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
