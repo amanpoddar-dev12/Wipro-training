@@ -55,22 +55,22 @@ Thread Management
 JDK(JVM + class libraries)
 
 
-// All user defined classes Employee , Program are inherited from using System.Object
-// which gives you some predefined methods
-// like 
-// ToString()
-// Equals()
-// GetHashCode()
-// GetType()
+All user defined classes Employee , Program are inherited from using System.Object
+which gives you some predefined methods
+like 
+ToString()
+Equals()
+GetHashCode()
+GetType()
 
 
-// Control Statements :
+Control Statements :
 
-// which gives the flow of execution in a C# program so there are three types:
-// 1. Sequential  -- step by step
-// 2. Conditional -- Decision based (if/else/switch)
-// 3. Branch Execution-- (break/continue/return)
-// 4. Iterative -- Loops  -- (for/while/do while)
+which gives the flow of execution in a C# program so there are three types:
+1. Sequential  -- step by step
+2. Conditional -- Decision based (if/else/switch)
+3. Branch Execution-- (break/continue/return)
+4. Iterative -- Loops  -- (for/while/do while)
 
 
 syntax:

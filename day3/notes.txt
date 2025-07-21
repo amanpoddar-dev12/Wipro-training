@@ -1,0 +1,387 @@
+dotnet new console -n day3
+dotnet build
+dotnet run
+
+
+
+
+Arrays : is used to store multiple values of similar data types: 
+because let's say if want to store 5 employees 
+
+In c# we have different data types  
+string emp1 ="Niti";
+string emp2 ="Jatin";
+
+So array is a reference data type to store the fixed number of elements of the 
+same data type. these are stored contiguously in the memory; (array is the data structure)
+
+string[,] students = new Student[3,2];
+{
+ 0,0      0,1
+{"Niti" , 23},
+1,0       1,1
+{"Jatin" ,34},
+{"Sakshi",26}
+}
+
+
+class  is just a blue print or a template for defining the properties , attributes and methods 
+& Object --- We can access those properties , attributes and methods via creating an object of that class
+// in array we were storing similar data of single primitive type
+// in object we can store different data type of values (like int , string , boolean , char)
+properties in C#
+
+class Student
+{
+   // attributes of a classes  we call it as encapsulation means (hidden)
+    private string name;
+    private string age=18;
+
+// to access private data members of a class we use get and set and those are public
+
+    public string Name{
+
+       get{return name;}
+       set{name = value;}
+    }
+
+    or you can define it as
+
+    public string Name{get; set;};
+
+
+}
+// you have to store 5 objects of a student class having name , age and marks  
+//you want to store;
+
+
+class Student{
+
+
+public string Name{get; set;}
+public int Age{get; set;}
+public int[] subjectMarks{get; set;}
+
+
+}
+
+
+
+Student s = new Student();
+// Here Student is a class and we are creating or initializing an object using new 
+keyword of that class where we have one implicit constructor will be invoked to 
+provide the memory of the properties and setting the default values in it 
+int =0
+name = null;
+s = null;
+Student[0]  = new Student();
+Student[1] = new Student();
+Student[i]
+
+int[] stud = new int[5];
+stud[0] =10;
+
+
+--- constructor ---
+
+Rules :-
+
+ 1. constructor name and class name must be same
+ 2. constructor does not have any return type
+ 3. the moment we create an object of a class by default constructor will be invoke 
+ for eg  Student s = new Student();
+ 4. to initialize an object and the default values will be set.
+ 5. can be overloaded 
+
+
+ --- Types of constructor----
+ 1. default constructor
+ 2. Non-Parameterized constructor when developer has defined explicitly in a class.
+ 3. Parameterized constructor when we want to set some values in place of default values;
+ 4. Static constructor which is used to initilize the static variables 
+ 5. Private constructor for implemention single object creation (singleton pattern like connection obj to connect with database )
+ class Student extends Address{
+
+    static int count;
+
+   static  Student()
+    {
+       count = 0;
+      Console.WriteLine("Static constructor called with a value as : " + count);
+    }
+ }
+
+Student s = new Student();
+
+
+Access Specifiers in C#
+
+there are mainly 5 access Specifiers
+a) public  :  anywhere 
+b) private :  within the class  -- Encapsulation of your business data
+
+tomorrow when we will do the inheritance
+c) protected : same class + derived class 
+
+while doing the dll examples
+d) internal  : within the same project / assembly  -- use it within the same application 
+e) protected internal : same project or derived classes in any assembly(dll file)
+f) private protected :  same class or derived classes within the same assembly
+student project.dll                             Employee project.dll
+namespace data{
+class Student{                              Employee extends Student{}
+
+protected internal void input()
+{
+
+
+}
+
+
+}
+}
+
+using data
+class Teacher extends Student
+{
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+
+class Student
+{
+    // Define properties
+    // Complete Step 1:............
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Grade { get; set; }
+    // Define constructor
+    // Complete Step 2:............
+    public Student(string name, int age, string grade)
+    {
+        Name = name;
+        Age = age;
+        Grade = grade;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Prompt the user to enter student details
+        Console.WriteLine("Enter student's name:");
+        // Complete Step 3:............
+        string name = Console.ReadLine();
+        Console.WriteLine("Enter student's age:");
+        // Complete Step 4:............
+        int age = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter student's grade:");
+        // Complete Step 5:............
+        string grade = Console.ReadLine();
+        // Create an instance of the Student class
+        // Complete Step 6:............
+        Student student = new Student(name, age, grade);
+
+        // Print student details
+        // Complete Step 7:............
+        Console.WriteLine("Student Name: " + student.Name);
+        Console.WriteLine("Student Age: " + student.Age);
+        Console.WriteLine("Student Grade: " + student.Grade);
+    }
+}
+
+
+
+
+using System;
+
+class Book
+{
+    // Define properties
+    // Complete Step 1:............
+    public string Title { get; set; }
+    public string Author { get; set; }
+    public int Year { get; set; }
+    // Define constructor
+    // Complete Step 2:............
+    public Book(string title,string author,int year)
+    {
+        Title =title;
+        Author=author;
+        Year=year;
+    }
+    // Define constructor
+    // Complete Step 2:............
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Prompt the user to enter book details
+        Console.WriteLine("Enter book's title:");
+        // Complete Step 3:............
+          string title=Console.ReadLine();
+        Console.WriteLine("Enter book's author:");
+        // Complete Step 4:............
+         string author=Console.ReadLine();
+        Console.WriteLine("Enter book's year:");
+        // Complete Step 5:............
+        int year=Convert.ToInt32(Console.ReadLine());
+        // Create an instance of the Book class
+        // Complete Step 6:............
+        Book book=new Book(title,author,year);
+        // Print book details
+        // Complete Step 7:............
+        Console.WriteLine("Book Title: "+title);
+        Console.WriteLine("Book Author: "+ author);
+        Console.WriteLine("Book Year: "+year);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+
+struct Product
+{
+    // Define fields for product details
+    public string Name; // Stores product name
+    public decimal Price; // Stores product price
+    public int Quantity; // Stores product quantity
+
+    // Constructor to initialize the product fields
+    public Product(string name, decimal price, int quantity)
+    {
+        // Assign the product name
+        // Assign the product price
+         // Assign the product quantity
+         Name=name;
+         Price=price;
+         Quantity=quantity;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Initialize the inventory
+        // Maximum number of products
+        // Array to store products
+         // Counter to track added products
+        const int maxProducts=10;
+        Product[] products = new Product[maxProducts];
+        int productCount=0;
+
+        while (true)
+        {
+            // Display menu options for user interaction
+            Console.WriteLine("1. Add Product");
+            Console.WriteLine("2. View Products");
+            Console.WriteLine("3. Update Product");
+            Console.WriteLine("4. Exit");
+            Console.Write("Enter your choice: ");
+            string choice = Console.ReadLine(); // Read user choice
+
+            switch (choice)
+            {
+                case "1":
+                    // Add a new product
+                    if (productCount < maxProducts)
+                    {
+                        Console.Write("Enter product name: ");
+                        string name = Console.ReadLine(); // Get product name
+                        Console.Write("Enter product price: ");
+                        decimal price = Convert.ToDecimal(Console.ReadLine()); // Get and convert price
+                        Console.Write("Enter product quantity: ");
+                        int quantity = Convert.ToInt32(Console.ReadLine()); // Get and convert quantity
+                        products[productCount] = new Product(name, price, quantity); // Add product
+                        productCount++; // Increment product count
+                        Console.WriteLine("Product added successfully!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Inventory is full!"); // Show error if full
+                    }
+                    break;
+                case "2":
+                    // View all products
+                    for (int i = 0; i < productCount; i++)
+                    {
+                        Console.WriteLine($"Name: {products[i].Name}, Price: {products[i].Price:F1}, Quantity: {products[i].Quantity}");
+                    }
+                    break;
+                case "3":
+                    // Update an existing product
+                    Console.Write("Enter product name to update: ");
+                    string updateName = Console.ReadLine();
+                    bool found = false;
+                    for (int i = 0; i < productCount; i++)
+                    {
+                        if (products[i].Name.Equals(updateName, StringComparison.OrdinalIgnoreCase))
+                        {
+                            found = true; // Mark as found
+                            Console.Write("Enter new price: ");
+                            products[i].Price = Convert.ToDecimal(Console.ReadLine()); // Update price
+                            Console.Write("Enter new quantity: ");
+                            products[i].Quantity = Convert.ToInt32(Console.ReadLine()); // Update quantity
+                            Console.WriteLine("Product updated successfully!");
+                            break;
+                        }
+                    }
+                    if (!found)
+                    {
+                        Console.WriteLine("Product not found!"); // Handle missing product
+                    }
+                    break;
+                case "4":
+                    // Exit the application
+                    return;
+                default:
+                    Console.WriteLine("Invalid choice, please try again."); // Handle invalid input
+                    break;
+            }
+        }
+    }
+}
