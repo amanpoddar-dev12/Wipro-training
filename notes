@@ -1,0 +1,10 @@
+dotnet new console -o day3
+dotnet build
+dotnet run
+
+
+
+
+array
+multidimensinalarray
+jaggedArray
