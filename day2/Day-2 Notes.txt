@@ -1,0 +1,113 @@
+In C# program will start from the Main() which is the entry point of your project 
+
+
+class and the object 
+
+what is class -- IT is a blue print of your program structure
+what is and object --- Object is a real time entity (has some existence (like its
+own properties and behaviour(action -- Method)) )
+What is Method -- Method is some set of statements or instructions
+
+for eg:
+
+ public void Display() 
+ { 
+    int a =10;
+    Console.Writeline("Display method called"); 
+    }
+
+
+
+
+class Program{                        class Student{
+
+static void Main()                    public void Display(){
+{
+    // Class reference variable is 
+    // pointing to an object
+   Student s = new Student();                                 Console.WriteLine("sffhkfh");
+     s.Display();
+}
+                                           }
+}
+
+
+BCL : Core Libraries
+System
+System.Collections
+System.IO
+System.Threading
+
+CLR :
+JIT Compilation
+Garbage Collections
+Exception Handling 
+Security
+Thread Management
+
+
+JDK(JVM + class libraries)
+
+
+All user defined classes Employee , Program  are inherited from using System.Object 
+which gives you some predefined methods
+like 
+ToString()
+Equals()
+GetHashCode()
+GetType()
+
+
+Control Statements :
+
+which gives the flow of execution in a C# program so there are three types:
+1. Sequential  -- step by step
+2. Conditional -- Decision based (if/else/switch)
+3. Branch Execution-- (break/continue/return)
+4. Iterative -- Loops  -- (for/while/do while)
+
+
+syntax:
+
+int age;
+if(age>25)
+{
+  Console.WriteLine("You are eligible for a loan");
+}
+else{
+ Console.WriteLine("You are not eligible for a loan");
+
+}
+
+//Multiple Conditional
+if(age>25)
+{
+ CWL( you are eligible for loan );
+}
+else if (age >18)
+{
+
+  CWL( you are eligible for loan and voting both);
+}
+else{
+
+}
+
+
+if(country == "India")
+{
+
+  if(state == "Delhi")
+  {
+
+  }
+  else
+  {
+
+  }
+}
+else{
+
+}
+
+

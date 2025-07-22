@@ -1,0 +1,14 @@
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\bin\Debug\net9.0\Day2.exe
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\bin\Debug\net9.0\Day2.deps.json
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\bin\Debug\net9.0\Day2.runtimeconfig.json
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\bin\Debug\net9.0\Day2.dll
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\bin\Debug\net9.0\Day2.pdb
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\obj\Debug\net9.0\Day2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\obj\Debug\net9.0\Day2.AssemblyInfoInputs.cache
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\obj\Debug\net9.0\Day2.AssemblyInfo.cs
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\obj\Debug\net9.0\Day2.csproj.CoreCompileInputs.cache
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\obj\Debug\net9.0\Day2.dll
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\obj\Debug\net9.0\refint\Day2.dll
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\obj\Debug\net9.0\Day2.pdb
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\obj\Debug\net9.0\Day2.genruntimeconfig.cache
+C:\Users\Niti Dwivedi\Documents\wiprotraining\Day2\obj\Debug\net9.0\ref\Day2.dll

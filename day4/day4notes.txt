@@ -1,0 +1,124 @@
+//String -   string  - alias name of System.String / String
+
+//It's created in the string pool(intern)
+string name = "niti"; // whenever we are declaring a variable and initializing with one value.
+String newname = name.ToUpper(); // whenever we are calling a static methods of String class there we use String
+
+
+string name = "niti";
+string names = new string("niti");
+
+
+String Class provides you some methods
+Length
+IndexOf
+Substring
+ToLower , ToUpper
+Replace
+Trim
+Split
+
+// create a string via different ways:
+a)  create a string using a constructor
+b)  using literal
+c)  string as concatenation
+d)  string using a property or a method
+
+
+string is a class so it is stored in the form of object 
+
+
+Casting (Use it for primitive type of values ) -- Implicit Casting(Which automatically)  / Explicit Casting
+
+conversion of int to short
+conversion of 
+
+size  of int =32 bits / 4 bytes
+         short = 16 bits / 2 bytes
+         
+         int a = 400;
+         short b = a;
+
+
+Boxing / Unboxing  -- (when we are converting from primitive to object (Boxing))
+                      (when we are converting from object to primitive (Unboxing))
+
+        int a = 500;
+        object b = a; // Boxing
+     
+      // here it is simply copying the reference hence no boxing occurs
+        int[] 
+        foreach(object o in list)
+        {
+
+        }
+
+        int[] numbers ={1,2,3,4};
+        foreach(var num in numbers)
+        {
+            object obj = number ; //boxing // wrapping into a reference type (i.e. heap)
+        }
+
+ string[] names = {"sdf","sdf","sdffg"};
+ foreach(var name in names )
+ {
+
+    object obj = name;   //No boxing becuase string is a reference type
+
+ }
+
+
+As we know string is immutable where it will create a new string objects in memory everytime if you modify it -- concating
+ String Builder  -- which is a mutable class in the System.Text namespace used for manipulating strings efficiently 
+ especially when you do some modifications like adding 
+
+
+ OOPS -- Object Oriented Programming System
+
+ class & objects 
+
+ class is a blueprint or a temple  with the help of object only
+ Structure using structs where we have properties , methods ,fields/attributes
+ Enumeration = set of some constant values 
+
+ the main properties/Features of a OOPS
+ a) Abstraction -- IT is achieved Interface and Abstract Class
+ b) Polymorphism -- using overriding (dynamic binding (run time)) and overloading(static binding compile time )
+ c) Encapsulation -- using get and set
+ d) Inheritance -- single , multilevel, heirarchical 
+
+When we design a blue print or a structure using some design pattern 
+
+Encapsulation : 1. Providing a security to the data , where all the attributes of a class are private but we provide get and set  which are public 
+                2. Permission whether you are giving reading permission or writing
+                3. security can be applied internally on a setter method where logic is already given 
+
+
+Abstration : Implementation hiding
+interface or abstract 
+Which means hiding complexity or business logic and exposing only the necessary interface to the user 
+
+Swiggy --- > Zomato , PizzaHut
+
+Difference between Abstract and Interface
+Abstract :- 1) Where methods are abstract(implementation will be provided by partners) as well as non abstract ( which is common for every partner)
+            2) We cannot create an object of abstract class
+            3) We can create fields , properties , methods (with or without body)
+            4) we can create constructor 
+            5) access specifier can be public, protected ,etc.)
+Interface :- 1) where all methods are abstract methods by default (so 100% abstraction)
+             and it's like a contract where there is no code only abstract methods
+             2) We cannot create an object of Interface
+             3) we can create  properties , methods (without body)
+             4) we cannot create constructors
+             5) By default its public
+             6) Multiple inheritance we can achieve using Interface
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\bin\Debug\net9.0\controlstatements.exe
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\bin\Debug\net9.0\controlstatements.deps.json
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\bin\Debug\net9.0\controlstatements.runtimeconfig.json
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\bin\Debug\net9.0\controlstatements.dll
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\bin\Debug\net9.0\controlstatements.pdb
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\obj\Debug\net9.0\controlstatements.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\obj\Debug\net9.0\controlstatements.AssemblyInfoInputs.cache
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\obj\Debug\net9.0\controlstatements.AssemblyInfo.cs
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\obj\Debug\net9.0\controlstatements.csproj.CoreCompileInputs.cache
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\obj\Debug\net9.0\controlstatements.dll
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\obj\Debug\net9.0\refint\controlstatements.dll
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\obj\Debug\net9.0\controlstatements.pdb
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\obj\Debug\net9.0\controlstatements.genruntimeconfig.cache
+C:\Users\Niti Dwivedi\Documents\wiprotraining\controlstatements\obj\Debug\net9.0\ref\controlstatements.dll
