@@ -9,6 +9,7 @@ string name = "niti";
 string names = new string("niti");
 
 
+
 String Class provides you some methods
 Length
 IndexOf

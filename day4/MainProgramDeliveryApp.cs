@@ -1,17 +1,19 @@
-class DeliveryApp
-{
+// class DeliveryApp
+// {
 
 
-    static void Main()
-    {
-        DeliveryPlatform partner = new ZomatoPartner(); // creating an object of implementation class
-        partner.PartnerName = "Zomato";
+//     static void Main()
+//     {
+//         DeliveryPlatform partner = new ZomatoPartner(); // creating an object of implementation class
+//         partner.PartnerName = "Zomato";
 
-        partner.TrackOrder();
-        partner.DeliveryOrder();
+//         partner.TrackOrder();
+//         partner.DeliveryOrder();
 
-        IpaymentGateway payment = (IpaymentGateway)partner;
-        payment.ProcessPayment();
+//         IpaymentGateway payment = (IpaymentGateway)partner;
+//         payment.ProcessPayment();
 
-    }
-}
+//     }
+// }
+
+

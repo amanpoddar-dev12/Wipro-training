@@ -54,7 +54,7 @@
 //         }
 //         Console.WriteLine("Total number of special characters: " + specialCharCount);
 
-      
+
 //         string s=Console.ReadLine();
 //         int vowel=0;
 //         foreach(char ch in s)
@@ -69,6 +69,23 @@
 // }
 
 
-    
+class StringPrograms
+{
+    static void Main()
+    {
 
 
+        int countDigit = 0;
+        string text = "my name is $man^poddar ananand **";
+
+        foreach (char ch in text)
+        {
+            if (!char.IsLetterOrDigit(ch) && !char.IsWhiteSpace(ch))
+            {
+                countDigit++;
+            }
+        }
+
+        Console.WriteLine("count" + countDigit);
+    }
+}
