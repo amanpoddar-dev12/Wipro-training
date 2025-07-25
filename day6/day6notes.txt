@@ -1,0 +1,164 @@
+Non -Generic 
+
+boxing/unboxing
+boxing :- When we convert a value type(like int ) into an object type(reference type)
+
+int num value1 = 10;
+object boxedvalue = num;  // boxing
+
+Unboxing  :-  when we extract the value type from an object
+
+int valuetype = (int)boxedvalue;  // unboxing
+
+These operations are expensive in performance :- then there will be a memory overhead  ,
+  This one is non type-safe because by mistaken wrong casting can be done which may cause a run time errors
+
+  List<Student> list = new List<Student>();
+
+  for(int i=0 ; i<5 ; i++)
+  {
+    Student s = new Student(3434,"df");
+     list.Add(s);
+  }
+
+  List<int> numbers = new List<int>();
+  numbers.Add(10);  // No boxing
+  int result = numbers[0]; // No Unboxing
+ 
+ // Non-Generic
+  List numbers = new List();
+  numbers.Add(10);  // No boxing
+  int result = numbers[0]; // No Unboxing
+
+  c# provides some wrapper classes 
+
+  Wrapper class is a class that wraps value types to provide some extra functionalities
+  System.Object which is the universal 
+
+  System.Int32 -- wraps -- value type which is int  -- Generic class for type safety at compile time only you are telling to compiler that internally should convert into int
+  System.Double -- wraps -- value type which is Double
+  Whenever we are boxing to an int ,  it is converting it into System.Object but internally it uses System.Int32;
+
+
+ArrayList list = new ArrayList();
+list.Add(56);
+string name = (string)list[0]; //unboxing
+
+(It will work)
+Showing error  - compile time or run time
+
+int x =5;
+object obj = x; // Boxing
+int y = (int)obj;
+
+ArrayList
+List<int> -- strict type safety
+List<object>
+
+
+File Handling -- 
+
+Input Stream & Output Stream
+
+Stream -- It is an representation of a sequence of data or bytes that flows from one direction to another
+
+Console.ReadLine(); -- > Input stream -- Keyboard
+
+ Stream or a pipe (where your data flows) -- save your data into a file. ( File input stream(Reading) and File output stream(Writing))
+
+Console.WriteLine(); --> Output Stream -- output devices  -- Monitor
+
+
+Input Stream -- Reading the data from file or Keyboard
+Output Stream --  Writing the data to a file or on Console
+File Stream --- which is used to read/write to files ( file based) 
+Memory Stream -- Read/ write the data in memory(RAM) not a file
+Network Stream - TCP/IP  -- which will transfer the data over a network.
+
+
+FileStream fs = new FileStream("datafile.txt",FileMode.Create);
+
+Keyboard ---InputStream---> To your app ---Output Stream ----> File / Console
+After this you can pass this file to 
+StreamReader
+StreamWriter
+BinaryReader
+BinaryWriter
+
+Stream input = Console.OpenStandardInput();
+StreamReader reader = new StreamReader(input);
+
+string  line = reader.ReadLine();
+Console.WriteLine(line);
+
+
+Stream output = Console.OpenStandardOutput();
+StreamWriter writer = new StreamWriter(output);
+
+writer.WriteLine("this is your code");
+
+
+Operations on a file :
+Create -  
+Write
+Append
+Read
+Delete
+Copy
+Move 
+
+File stream we are using for logging purpose
+
+We want to simulate a log system ()
+
+create  a file
+write some logs
+append new logs
+read logs 
+backup(copy)
+delete 
+move 
+
+Different ways to work with files
+1. StreamReader --  reading the text file
+2. StreamWriter -- writing the text file ( PrintStream)
+3. FileStream  -- to read Binary files
+4. FileStream   -- to write binary files
+5. StreamReader -- auto buffered
+
+
+two types of files 
+Binary  --  bytes 
+Text --- human can understand  UTF-8/ASCII  
+
+An exception is a runtime errors that disrupts the normal flow of you program 
+It occurs when something goes wrong:
+
+Divide by zero ,  file not found.
+
+Compile time errors and run time errors
+syntax error , type mismatch , punctuation , semicolon , spacing (during build time)
+run time errors  -  It occurs at runtime when there is no compile time error but issues with your logic, something you are trying to access the object but it's null reference.
+
+Error vs exception
+Error may cause serious issues also like infinite loop  ,
+ blue screen code which is unrecoverable which developers can not handle, out of memory 
+Exceptions : - Can be handled gracefully and manageable 
+
+
+Errors occured during compile time or when system crashes
+Exceptions :  Run time
+Some of the exception are filenotfound , indexoutofrange
+
+Exceptions can be handled using try and catch
+
+try{// Busines logic }
+// no statement
+catch(){// handler -- who is going to catch the exception}
+finally{ // optional code that always be executed whether there is an exception or not }
+generally used for closing all the resources
+
+
+
+
+
