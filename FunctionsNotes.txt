@@ -1,0 +1,36 @@
+1. length // str.Length
+2. str.ToUpper()
+3. str.ToLower()
+4. str.Substring(1,2) // starts at index 1 and takes 2 characters
+5. str.contains()
+6. str.IndexOf() //returns the index of the first occurrence of a specified substring. If not found, it returns -1.
+7. str.Replace("x","y")
+8. str.Trim() method removes all leading and trailing white-space characters from the string.
+9. string[] strary = str.Split(',') //splits a string into an array of substrings based on a delimiter.
+10. str.StartsWith("test") returns bool
+
+11. str.EndsWith("test") returns bool
+12. str = string.Join(",",strary) // check point 9 for the array which is joined into a string with a separator
+13. Format().  This method is used to insert values into a string template.
+    	int age = 25;
+        string name = "John";
+        string sentence = string.Format("My name is {0} and I am {1} years old.", name, age);
+        Console.WriteLine(sentence);  // Output: My name is John and I am 25 years old.
+14.  PadLeft() and PadRight()
+These methods add padding (spaces or other characters) to the left or right of the string.
+
+Example:
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string text = "123";
+        Console.WriteLine(text.PadLeft(5, '0'));  // Output: 00123
+        Console.WriteLine(text.PadRight(5, '0'));  // Output: 12300
+    }
+}
+
+
