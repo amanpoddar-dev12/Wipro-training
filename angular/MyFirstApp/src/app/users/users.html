@@ -1,0 +1,54 @@
+<div>
+  <h2>User Management</h2>
+  
+  <div>
+    <button (click)="getUsers()">Get Users</button>
+  </div>
+  
+  <div>
+    <!-- User Form -->
+    <div>
+      <h3>{{ user.id ? 'Edit User' : 'Add New User' }}</h3>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="user.name" placeholder="Name" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" [(ngModel)]="user.email" placeholder="Email" />
+      </div>
+      <div *ngIf="user.id">
+        <small>Editing user ID: {{ user.id }}</small>
+      </div>
+      <div>
+        <button (click)="addUser()" *ngIf="!user.id">Add User</button>
+        <button (click)="updateUser()" *ngIf="user.id">Update User</button>
+        <button (click)="resetForm()">Clear Form</button>
+      </div>
+    </div>
+    
+    <!-- User List -->
+    <div *ngIf="users.length > 0">
+      <h3>Users List</h3>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of users">
+            <td>{{ u.name }}</td>
+            <td>{{ u.email }}</td>
+            <td>
+              <button (click)="selectUser(u)">Edit</button>
+              <button (click)="selectUser(u); deleteUser();">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";/* You can add global styles to this file, and also import other style files */
+.btn1 {
+    background-color: #00ff4c;
+  margin: 10px !important;
+}
+
+p{padding: 10px !important;background-color: aqua}

@@ -8,11 +8,10 @@
 8. str.Trim() method removes all leading and trailing white-space characters from the string.
 9. string[] strary = str.Split(',') //splits a string into an array of substrings based on a delimiter.
 10. str.StartsWith("test") returns bool
-
 11. str.EndsWith("test") returns bool
 12. str = string.Join(",",strary) // check point 9 for the array which is joined into a string with a separator
 13. Format().  This method is used to insert values into a string template.
-    	int age = 25;
+    int age = 25;
         string name = "John";
         string sentence = string.Format("My name is {0} and I am {1} years old.", name, age);
         Console.WriteLine(sentence);  // Output: My name is John and I am 25 years old.
@@ -32,5 +31,86 @@ class Program
         Console.WriteLine(text.PadRight(5, '0'));  // Output: 12300
     }
 }
+15. Equals()
+The Equals() method is used to compare two strings for equality.
 
+Example:
+using System;
 
+class Program
+{
+    static void Main()
+    {
+        string str1 = "Hello";
+        string str2 = "hello";
+        Console.WriteLine(str1.Equals(str2));  // Output: False (case-sensitive comparison)
+    }
+}
+
+16. Chars[]
+Provides access to individual characters in the string by index.
+string text = "Hello";
+char ch = text[1];  // 'e
+
+17. IsNullOrEmpty()
+Checks if a string is null or empty.
+string text = "";
+bool isEmpty = string.IsNullOrEmpty(text);  // True
+
+18. IsNullOrWhiteSpace()
+Checks if a string is null, empty, or consists only of white-space characters.
+csharp
+Copy
+string text = "   ";
+bool isWhiteSpace = string.IsNullOrWhiteSpace(text);  // True
+
+19. Compare()
+Compares two strings and returns an integer that indicates their relative position in the sort order.
+int result = string.Compare("apple", "banana");  // -1
+
+20. CompareTo()
+Compares the current string with another string and returns an integer.
+int result = "apple".CompareTo("banana");  // -1
+
+21. Equals()
+Compares two strings for equality (case-sensitive by default).
+bool isEqual = "Hello".Equals("hello");  // False
+
+22. CompareOrdinal()
+Compares two strings using ordinal (binary) sort rules.
+int result = string.CompareOrdinal("apple", "banana");  // -1
+
+23. Remove()
+Removes a specified number of characters starting at a specified index.
+string removed = "Hello".Remove(1, 3);
+24. Insert()
+Inserts a substring at a specified position.
+string inserted = "Hello".Insert(5, " World");  // "Hello World"
+
+25. Concat()
+Concatenates multiple strings into a single string.
+string concatenated = string.Concat("Hello", " ", "World");  // "Hello World"
+
+26. ToString()
+Converts the current string to its string representation.
+object obj = "Hello";
+string str = obj.ToString();  // "Hello"
+
+27. LastIndexOf()
+Returns the index of the last occurrence of a specified substring.
+int lastIndex = "Hello, Hello".LastIndexOf("Hello");  // 7
+
+28. IndexOfAny()
+Returns the index of the first occurrence of any of the characters in a specified array of characters.
+int index = "Hello".IndexOfAny(new char[] { 'o', 'i' });  // 2
+29. LastIndexOfAny()
+Returns the index of the last occurrence of any of the characters in a specified array of characters.
+int lastIndex = "Hello".LastIndexOfAny(new char[] { 'o', 'l' });  // 3
+
+30. ToCharArray()
+Converts the string to an array of characters.
+char[] charArray = "Hello".ToCharArray();  // ['H', 'e', 'l', 'l', 'o']
+
+31. Normalize()
+Normalizes the string to a specified Unicode form (e.g., composed or decomposed).
+string normalized = "e\u0301".Normalize();  // "é"

@@ -1,0 +1,32 @@
+<h2>User Management</h2>
+
+<form (ngSubmit)="addUser()">
+  <input type="text" placeholder="First Name" [(ngModel)]="user.firstName" name="firstName" required />
+  <input type="number" placeholder="Age" [(ngModel)]="user.age" name="age" required />
+  <button type="submit">{{ editMode ? 'Update' : 'Add' }} User</button>
+  <button type="button" (click)="resetForm()" *ngIf="editMode">Cancel</button>
+</form>
+
+<hr>
+
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Age</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <td>{{ u.id }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.age }}</td>
+      <td>
+        <button (click)="editUser(u)">Edit</button>
+        <button (click)="deleteUser(u.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
