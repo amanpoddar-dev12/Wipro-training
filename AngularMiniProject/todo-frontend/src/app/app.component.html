@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="card">
+    <h1 class="title">Todos</h1>
+
+    <div class="add-row">
+      <input
+        type="text"
+        placeholder="What needs to be done?"
+        [ngModel]="newTitle()"
+        (ngModelChange)="newTitle.set($event)"
+        (keydown)="onNewTodoKeydown($event)"
+        class="input"
+        autofocus
+      />
+      <button class="btn" (click)="addTodo()">Add</button>
+    </div>
+
+    <div class="filters">
+      <button class="chip" [class.active]="filter() === 'all'" (click)="setFilter('all')">All</button>
+      <button class="chip" [class.active]="filter() === 'active'" (click)="setFilter('active')">Active</button>
+      <button class="chip" [class.active]="filter() === 'completed'" (click)="setFilter('completed')">Completed</button>
+    </div>
+
+    <ul class="list">
+      <li class="item" *ngFor="let todo of filteredTodos()">
+        <label class="left">
+          <input type="checkbox" [checked]="todo.completed" (change)="toggle(todo)" />
+          <span
+            class="title-text"
+            [class.done]="todo.completed"
+            (dblclick)="startEdit(todo)"
+            *ngIf="editingId() !== todo.id"
+            title="Double-click to edit"
+          >{{ todo.title }}</span>
+
+          <input
+            *ngIf="editingId() === todo.id"
+            class="edit-input"
+            type="text"
+            [ngModel]="editingTitle()"
+            (ngModelChange)="editingTitle.set($event)"
+            (blur)="saveEdit(todo)"
+            (keydown)="onEditKeydown(todo, $event)"
+          />
+        </label>
+        <button class="icon-btn" (click)="delete(todo)" aria-label="Delete">✕</button>
+      </li>
+    </ul>
+
+    <div class="footer">
+      <span>{{ remainingCount() }} item{{ remainingCount() === 1 ? '' : 's' }} left</span>
+      <button class="link-btn" (click)="clearCompleted()">Clear completed</button>
+      <button class="link-btn" (click)="refresh()" title="Reload from server">↻ Refresh</button>
+    </div>
+  </div>
+</div>

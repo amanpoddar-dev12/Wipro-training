@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'fsapp';
+  title = 'My frontend App';
+  // myHobbies: any = [{ name: 'Reading', fav: false }, { name: 'Travelling', fav: false }];
+  // login:
 }
