@@ -1,0 +1,22 @@
+<div class="container mt-4">
+  <h2 class="mb-3 text-center">Upcoming Events</h2>
+
+  <table class="table table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Ticket Price</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of events" [appHighlight]="event.price">
+        <td>{{ event.name }}</td>
+        <td>{{ event.date | date:'dd-MMM-yyyy' }}</td>
+        <td>{{ event.price | priceFormat }}</td>
+        <td>{{ event.category }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
