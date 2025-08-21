@@ -1,0 +1,15 @@
+@model CarRentalSystem.Models.Entity.Car
+@{
+    ViewData["Title"] = "Car Details";
+}
+
+<h2>Car Details</h2>
+<ul class="list-group">
+    <li class="list-group-item"><strong>ID:</strong> @Model.VehicleID</li>
+    <li class="list-group-item"><strong>Make:</strong> @Model.Make</li>
+    <li class="list-group-item"><strong>Model:</strong> @Model.Model</li>
+    <li class="list-group-item"><strong>Year:</strong> @Model.Year</li>
+    <li class="list-group-item"><strong>Rate:</strong> @Model.DailyRate</li>
+    <li class="list-group-item"><strong>Status:</strong> @Model.Status</li>
+</ul>
+<a href="/Car/Index" class="btn btn-secondary mt-2">Back</a>

@@ -1,0 +1,10 @@
+C:\Users\HP\Desktop\Wipro-training\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Wipro-training\CarRentalSystem\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\HP\Desktop\Wipro-training\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\Wipro-training\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Wipro-training\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.AssemblyInfo.cs
+C:\Users\HP\Desktop\Wipro-training\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Wipro-training\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HP\Desktop\Wipro-training\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.RazorAssemblyInfo.cache
+C:\Users\HP\Desktop\Wipro-training\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.RazorAssemblyInfo.cs
+C:\Users\HP\Desktop\Wipro-training\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.sourcelink.json

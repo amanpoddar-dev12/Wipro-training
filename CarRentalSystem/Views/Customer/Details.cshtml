@@ -1,0 +1,9 @@
+@model CarRentalSystem.Models.Entity.Customer
+<h2>Customer Details</h2>
+<ul class="list-group">
+    <li class="list-group-item"><strong>ID:</strong> @Model.CustomerID</li>
+    <li class="list-group-item"><strong>Name:</strong> @Model.FirstName @Model.LastName</li>
+    <li class="list-group-item"><strong>Email:</strong> @Model.Email</li>
+    <li class="list-group-item"><strong>Phone:</strong> @Model.PhoneNumber</li>
+</ul>
+<a href="/Customer/Index" class="btn btn-secondary mt-2">Back</a>

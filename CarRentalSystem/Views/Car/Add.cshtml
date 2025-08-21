@@ -1,0 +1,37 @@
+@model CarRentalSystem.Models.Entity.Car
+@{
+    ViewData["Title"] = "Add Car";
+}
+
+<h2>Add New Car</h2>
+<form method="post">
+    <div class="form-group">
+        <label>Make</label>
+        <input asp-for="Make" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Model</label>
+        <input asp-for="Model" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Year</label>
+        <input asp-for="Year" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Daily Rate</label>
+        <input asp-for="DailyRate" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Status</label>
+        <input asp-for="Status" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Passenger Capacity</label>
+        <input asp-for="PassengerCapacity" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Engine Capacity</label>
+        <input asp-for="EngineCapacity" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success mt-2">Save</button>
+</form>
