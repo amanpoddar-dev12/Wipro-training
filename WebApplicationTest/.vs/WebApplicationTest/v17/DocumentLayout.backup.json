@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|c:\\users\\hp\\desktop\\wipro-training\\webapplicationtest\\webapplicationtest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|solutionrelative:webapplicationtest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|c:\\users\\hp\\desktop\\wipro-training\\webapplicationtest\\webapplicationtest\\areas\\identity\\pages\\org\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|solutionrelative:webapplicationtest\\areas\\identity\\pages\\org\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -63,10 +67,6 @@
       "RelativeMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|solutionrelative:webapplicationtest\\areas\\identity\\pages\\org\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|c:\\users\\hp\\desktop\\wipro-training\\webapplicationtest\\webapplicationtest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|solutionrelative:webapplicationtest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|c:\\users\\hp\\desktop\\wipro-training\\webapplicationtest\\webapplicationtest\\data\\orgcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|solutionrelative:webapplicationtest\\data\\orgcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -77,10 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|c:\\users\\hp\\desktop\\wipro-training\\webapplicationtest\\webapplicationtest\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|solutionrelative:webapplicationtest\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Data\\Migrations\\20250801065108_aman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebApplicationTest\\Data\\Migrations\\20250801065108_aman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|c:\\users\\hp\\desktop\\wipro-training\\webapplicationtest\\webapplicationtest\\data\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,6 +101,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|c:\\users\\hp\\desktop\\wipro-training\\webapplicationtest\\webapplicationtest\\data\\migrations\\20250731180323_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|solutionrelative:webapplicationtest\\data\\migrations\\20250731180323_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|c:\\users\\hp\\desktop\\wipro-training\\webapplicationtest\\webapplicationtest\\data\\migrations\\20250801065108_aman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BDB275D-494C-4513-8E46-5BCB0AE01B8F}|WebApplicationTest\\WebApplicationTest.csproj|solutionrelative:webapplicationtest\\data\\migrations\\20250801065108_aman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,11 +114,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Create.cshtml",
               "RelativeDocumentMoniker": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Create.cshtml",
@@ -126,12 +126,11 @@
               "RelativeToolTip": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-01T08:51:29.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T08:51:29.734Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Delete.cshtml",
               "RelativeDocumentMoniker": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Delete.cshtml",
@@ -139,12 +138,11 @@
               "RelativeToolTip": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Delete.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-01T08:51:30.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T08:51:30.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Create.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Create.cshtml.cs",
               "RelativeDocumentMoniker": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Create.cshtml.cs",
@@ -152,12 +150,11 @@
               "RelativeToolTip": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Create.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T08:51:29.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T08:51:29.855Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Index.cshtml",
@@ -165,12 +162,24 @@
               "RelativeToolTip": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-01T08:51:30.664Z",
+              "WhenOpened": "2025-08-01T08:51:30.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplicationTest\\appsettings.json",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\appsettings.json",
+              "RelativeToolTip": "WebApplicationTest\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-01T04:15:42.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "WebApplicationTest\\Controllers\\HomeController.cs",
@@ -178,12 +187,11 @@
               "RelativeToolTip": "WebApplicationTest\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwBAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T17:27:40.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T17:27:40.34Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "WebApplicationTest\\Views\\Home\\Privacy.cshtml",
@@ -191,12 +199,11 @@
               "RelativeToolTip": "WebApplicationTest\\Views\\Home\\Privacy.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-31T17:25:24.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T17:25:24.595Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApplicationTest\\Views\\Home\\Index.cshtml",
@@ -204,12 +211,11 @@
               "RelativeToolTip": "WebApplicationTest\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-31T17:25:21.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T17:25:21.884Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Program.cs",
               "RelativeDocumentMoniker": "WebApplicationTest\\Program.cs",
@@ -217,12 +223,11 @@
               "RelativeToolTip": "WebApplicationTest\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T18:20:03.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T18:20:03.406Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Delete.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Delete.cshtml.cs",
               "RelativeDocumentMoniker": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Delete.cshtml.cs",
@@ -230,12 +235,11 @@
               "RelativeToolTip": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Delete.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T08:51:30.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T08:51:30.547Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Index.cshtml.cs",
@@ -243,12 +247,11 @@
               "RelativeToolTip": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Index.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T08:51:30.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T08:51:30.766Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Pages\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "WebApplicationTest\\Pages\\_ValidationScriptsPartial.cshtml",
@@ -256,12 +259,11 @@
               "RelativeToolTip": "WebApplicationTest\\Pages\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-01T08:51:30.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T08:51:30.879Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Details.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Details.cshtml.cs",
               "RelativeDocumentMoniker": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Details.cshtml.cs",
@@ -269,12 +271,11 @@
               "RelativeToolTip": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Details.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T08:51:30.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T08:51:30.342Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Details.cshtml",
               "RelativeDocumentMoniker": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Details.cshtml",
@@ -282,12 +283,11 @@
               "RelativeToolTip": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Details.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-01T08:51:30.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T08:51:30.23Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Edit.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Edit.cshtml.cs",
               "RelativeDocumentMoniker": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Edit.cshtml.cs",
@@ -295,12 +295,11 @@
               "RelativeToolTip": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Edit.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T08:51:30.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T08:51:30.07Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Edit.cshtml",
               "RelativeDocumentMoniker": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Edit.cshtml",
@@ -308,8 +307,7 @@
               "RelativeToolTip": "WebApplicationTest\\Areas\\Identity\\Pages\\Org\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-01T08:51:29.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T08:51:29.976Z"
             },
             {
               "$type": "Document",
@@ -321,8 +319,7 @@
               "RelativeToolTip": "WebApplicationTest\\Data\\OrgContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T06:59:01.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T06:59:01.354Z"
             },
             {
               "$type": "Document",
@@ -334,21 +331,7 @@
               "RelativeToolTip": "WebApplicationTest\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T17:29:05.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\appsettings.json",
-              "RelativeDocumentMoniker": "WebApplicationTest\\appsettings.json",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\appsettings.json",
-              "RelativeToolTip": "WebApplicationTest\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-01T04:15:42.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T17:29:05.492Z"
             },
             {
               "$type": "Document",
@@ -360,12 +343,11 @@
               "RelativeToolTip": "WebApplicationTest\\Models\\Organization.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T06:57:06.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T06:57:06.912Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "20250801065108_aman.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Data\\Migrations\\20250801065108_aman.cs",
               "RelativeDocumentMoniker": "WebApplicationTest\\Data\\Migrations\\20250801065108_aman.cs",
@@ -373,12 +355,11 @@
               "RelativeToolTip": "WebApplicationTest\\Data\\Migrations\\20250801065108_aman.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T06:51:08.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T06:51:08.743Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "WebApplicationTest\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -386,12 +367,11 @@
               "RelativeToolTip": "WebApplicationTest\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T17:29:36.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T17:29:36.733Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "Faculty.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Models\\Faculty.cs",
               "RelativeDocumentMoniker": "WebApplicationTest\\Models\\Faculty.cs",
@@ -399,12 +379,11 @@
               "RelativeToolTip": "WebApplicationTest\\Models\\Faculty.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T19:04:37.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T19:04:37.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "WebApplicationTest\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
@@ -412,12 +391,11 @@
               "RelativeToolTip": "WebApplicationTest\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "ViewState": "AgIAACEAAAAAAAAAAAAAADUAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-31T17:36:04.564Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T17:36:04.564Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "ScaffoldingReadMe.txt",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\ScaffoldingReadMe.txt",
               "RelativeDocumentMoniker": "WebApplicationTest\\ScaffoldingReadMe.txt",
@@ -429,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "20250731180323_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Data\\Migrations\\20250731180323_InitialCreate.cs",
               "RelativeDocumentMoniker": "WebApplicationTest\\Data\\Migrations\\20250731180323_InitialCreate.cs",
@@ -441,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "00000000000000_CreateIdentitySchema.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\WebApplicationTest\\WebApplicationTest\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
               "RelativeDocumentMoniker": "WebApplicationTest\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
