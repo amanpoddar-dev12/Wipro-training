@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmanRaj-Preptest-Wipro NGA .Net Fullstack Angular", "AmanRaj-Preptest-Wipro NGA .Net Fullstack Angular\AmanRaj-Preptest-Wipro NGA .Net Fullstack Angular.csproj", "{C28C58E7-BB4F-45B3-AC67-91E5314923DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C28C58E7-BB4F-45B3-AC67-91E5314923DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28C58E7-BB4F-45B3-AC67-91E5314923DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28C58E7-BB4F-45B3-AC67-91E5314923DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28C58E7-BB4F-45B3-AC67-91E5314923DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8A2EEDA-5595-4F4A-9964-E9C902452E1B}
+	EndGlobalSection
+EndGlobal
