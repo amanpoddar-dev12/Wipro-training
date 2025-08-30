@@ -1,0 +1,172 @@
+File Handling -- 
+
+Input Stream & Output Stream
+
+Stream -- It is an representation of a sequence of data or bytes that flows from one direction to another
+
+Console.ReadLine(); -- > Input stream -- Keyboard
+
+ Stream or a pipe (where your data flows) -- save your data into a file. ( File input stream(Reading) and File output stream(Writing))
+
+Console.WriteLine(); --> Output Stream -- output devices  -- Monitor
+
+
+Input Stream -- Reading the data from file or Keyboard
+Output Stream --  Writing the data to a file or on Console
+File Stream --- which is used to read/write to files ( file based) 
+Memory Stream -- Read/ write the data in memory(RAM) not a file
+Network Stream - TCP/IP  -- which will transfer the data over a network.
+
+
+FileStream fs = new FileStream("datafile.txt",FileMode.Create);
+
+Keyboard ---InputStream---> To your app ---Output Stream ----> File / Console
+After this you can pass this file to 
+StreamReader
+StreamWriter
+BinaryReader
+BinaryWriter
+
+Stream input = Console.OpenStandardInput();
+StreamReader reader = new StreamReader(input);
+
+string  line = reader.ReadLine();
+Console.WriteLine(line);
+
+
+Stream output = Console.OpenStandardOutput();
+StreamWriter writer = new StreamWriter(output);
+
+writer.WriteLine("this is your code");
+
+
+
+using System.IO;
+
+
+class Program2
+{
+
+
+    static void Main()
+    {
+
+        string path = "file1.txt";
+        string message = "File data related to c#";
+
+        //To write using FileStream
+        // Garbage collector 
+        // Manually we have to close and open (we need not to write manually open / close /flush with using keyword it automatically does)
+        FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write);
+        
+            byte[] data = System.Text.Encoding.UTF8.GetBytes(message);
+
+            fs.Write(data, 0, data.Length);
+
+        fs.Close();
+
+        FileStream fs1 = new FileStream(path, FileMode.Open, FileAccess.Read);
+        
+            // To read the data it is important to use buffer 
+            byte[] buffer = new byte[fs1.Length];
+            fs1.Read(buffer, 0, buffer.Length);
+
+            string result = System.Text.Encoding.UTF8.GetString(buffer);
+            Console.WriteLine(result);
+            fs1.Close();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+using System.IO;
+using System;
+class FileOperations
+{
+
+
+    static void Main()
+    {
+
+        string logFile = "logs.txt";
+        string backupFile = "logs_backup.txt";
+        string archiveFolder = "archieve";
+        string archivedFile = Path.Combine(archiveFolder, "logs_archived.txt");
+        // creating or overwriting the file
+        File.WriteAllText(logFile, "Log initiated :" + DateTime.Now);
+        Console.WriteLine("Log File created");
+
+        File.AppendAllText(logFile, " User has logged in ");
+        File.AppendAllText(logFile, " User has uploaded a file ");
+        Console.WriteLine("The data is appended");
+
+        string[] lines = File.ReadAllLines(logFile);
+        foreach (var line in lines)
+        {
+            Console.WriteLine(line);
+        }
+
+        File.Copy(logFile, backupFile, true);
+        Console.WriteLine("BackUp of Log file is created: ");
+
+        if (!Directory.Exists(archiveFolder))
+            Directory.CreateDirectory(archiveFolder);
+        if (File.Exists(archivedFile)) 
+            File.Delete(archivedFile);
+
+        File.Move(logFile, archivedFile);
+        Console.WriteLine("The log file is moved to archive folder");
+
+        if (File.Exists(backupFile))
+        {
+            File.Delete(backupFile);
+            Console.WriteLine("Back Up File is deleted");
+        }
+        
+
+    }
+}Input Stream -- Reading the data from file or Keyboard
+
+        
+        
+        
+        
+Operations on a file :
+Create -  
+Write
+Append
+Read
+Delete
+Copy
+Move 
+
+File stream we are using for logging purpose
+
+We want to simulate a log system ()
+
+create  a file
+write some logs
+append new logs
+read logs 
+backup(copy)
+delete 
+move 
+
+Different ways to work with files
+1. StreamReader --  reading the text file
+2. StreamWriter -- writing the text file ( PrintStream)
+3. FileStream  -- to read Binary files
+4. FileStream   -- to write binary files
+5. StreamReader -- auto buffered
+
+
+two types of files 
+Binary  --  bytes 
+Text --- human can understand  UTF-8/ASCII  

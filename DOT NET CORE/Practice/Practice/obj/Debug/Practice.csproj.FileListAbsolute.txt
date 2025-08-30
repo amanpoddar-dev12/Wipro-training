@@ -1,0 +1,8 @@
+C:\Users\HP\Desktop\Wipro-training\ADO.net\Practice\Practice\bin\Debug\Practice.exe.config
+C:\Users\HP\Desktop\Wipro-training\ADO.net\Practice\Practice\bin\Debug\Practice.exe
+C:\Users\HP\Desktop\Wipro-training\ADO.net\Practice\Practice\bin\Debug\Practice.pdb
+C:\Users\HP\Desktop\Wipro-training\ADO.net\Practice\Practice\obj\Debug\Practice.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Wipro-training\ADO.net\Practice\Practice\obj\Debug\Practice.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Wipro-training\ADO.net\Practice\Practice\obj\Debug\Practice.exe
+C:\Users\HP\Desktop\Wipro-training\ADO.net\Practice\Practice\obj\Debug\Practice.pdb
+C:\Users\HP\Desktop\Wipro-training\ADO.net\Practice\Practice\obj\Debug\Practice.exe.config

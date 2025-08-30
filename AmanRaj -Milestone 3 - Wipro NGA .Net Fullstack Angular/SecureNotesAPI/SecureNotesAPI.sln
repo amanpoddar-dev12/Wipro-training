@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureNotesAPI", "SecureNotesAPI.csproj", "{35EE75F1-C7CC-80FB-28B0-36D5AB526036}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35EE75F1-C7CC-80FB-28B0-36D5AB526036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35EE75F1-C7CC-80FB-28B0-36D5AB526036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35EE75F1-C7CC-80FB-28B0-36D5AB526036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35EE75F1-C7CC-80FB-28B0-36D5AB526036}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB747EDD-D493-488D-9856-85D6744EFD22}
+	EndGlobalSection
+EndGlobal

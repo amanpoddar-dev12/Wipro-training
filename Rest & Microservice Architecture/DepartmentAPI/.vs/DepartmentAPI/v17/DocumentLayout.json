@@ -1,0 +1,206 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\Migrations\\20250828073602_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DepartmentAPI\\Migrations\\20250828073602_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|c:\\users\\hp\\desktop\\wipro-training\\api\\departmentapi\\departmentapi\\departmentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|solutionrelative:departmentapi\\departmentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|c:\\users\\hp\\desktop\\wipro-training\\api\\departmentapi\\departmentapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|solutionrelative:departmentapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|c:\\users\\hp\\desktop\\wipro-training\\api\\departmentapi\\departmentapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|solutionrelative:departmentapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|c:\\users\\hp\\desktop\\wipro-training\\api\\departmentapi\\departmentapi\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|solutionrelative:departmentapi\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|c:\\users\\hp\\desktop\\wipro-training\\api\\departmentapi\\departmentapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|solutionrelative:departmentapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|c:\\users\\hp\\desktop\\wipro-training\\api\\departmentapi\\departmentapi\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|solutionrelative:departmentapi\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|c:\\users\\hp\\desktop\\wipro-training\\api\\departmentapi\\departmentapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|solutionrelative:departmentapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|c:\\users\\hp\\desktop\\wipro-training\\api\\departmentapi\\departmentapi\\departmentapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|solutionrelative:departmentapi\\departmentapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|c:\\users\\hp\\desktop\\wipro-training\\api\\departmentapi\\departmentapi\\departmentapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|solutionrelative:departmentapi\\departmentapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|c:\\users\\hp\\desktop\\wipro-training\\api\\departmentapi\\departmentapi\\departmentapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{5BF0BED8-9821-4D82-ACC6-1FBA8CB61E5F}|DepartmentAPI\\DepartmentAPI.csproj|solutionrelative:departmentapi\\departmentapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250828073602_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\Migrations\\20250828073602_InitialCreate.cs",
+              "RelativeDocumentMoniker": "DepartmentAPI\\Migrations\\20250828073602_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\Migrations\\20250828073602_InitialCreate.cs",
+              "RelativeToolTip": "DepartmentAPI\\Migrations\\20250828073602_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T07:36:03.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\Program.cs",
+              "RelativeDocumentMoniker": "DepartmentAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\Program.cs",
+              "RelativeToolTip": "DepartmentAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T06:32:57.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\Controllers\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "DepartmentAPI\\Controllers\\DepartmentController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "DepartmentAPI\\Controllers\\DepartmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T06:31:45.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "DepartmentAPI\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\WeatherForecast.cs",
+              "RelativeToolTip": "DepartmentAPI\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T06:33:06.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DepartmentContext.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\DepartmentContext.cs",
+              "RelativeDocumentMoniker": "DepartmentAPI\\DepartmentContext.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\DepartmentContext.cs",
+              "RelativeToolTip": "DepartmentAPI\\DepartmentContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T07:28:41.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DepartmentAPI",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\DepartmentAPI.csproj",
+              "RelativeDocumentMoniker": "DepartmentAPI\\DepartmentAPI.csproj",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\DepartmentAPI.csproj",
+              "RelativeToolTip": "DepartmentAPI\\DepartmentAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-28T06:33:24.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "DepartmentAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\appsettings.json",
+              "RelativeToolTip": "DepartmentAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-28T06:38:35.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "DepartmentAPI\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "DepartmentAPI\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T06:35:01.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Model.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\Model.cs",
+              "RelativeDocumentMoniker": "DepartmentAPI\\Model.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\Model.cs",
+              "RelativeToolTip": "DepartmentAPI\\Model.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T06:59:10.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DepartmentAPI.http",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\DepartmentAPI.http",
+              "RelativeDocumentMoniker": "DepartmentAPI\\DepartmentAPI.http",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\DepartmentAPI.http",
+              "RelativeToolTip": "DepartmentAPI\\DepartmentAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-08-28T06:35:17.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DepartmentAPI",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\DepartmentAPI.csproj",
+              "RelativeDocumentMoniker": "DepartmentAPI\\DepartmentAPI.csproj",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\API\\DepartmentAPI\\DepartmentAPI\\DepartmentAPI.csproj",
+              "RelativeToolTip": "DepartmentAPI\\DepartmentAPI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-28T06:34:12.499Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

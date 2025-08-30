@@ -1,0 +1,344 @@
+1. SELECT GETDATE() AS CurrentDateTime;
+2. SELECT GETUTCDATE() AS UtcDateTime;
+3. SELECT CAST(GETDATE() AS DATE) AS OnlyDate;
+   SELECT CONVERT(VARCHAR, GETDATE(), 103) AS FormattedDate; -- dd/mm/yyyy
+4. SELECT DATEADD(DAY, 7, GETDATE()) AS OneWeekLater;
+SELECT DATEADD(HOUR, -1, GETDATE()) AS OneHourAgo;
+5. SELECT DATEDIFF(DAY, '2025-01-01', GETDATE()) AS DaysPassed;
+6. SELECT DATEPART(YEAR, GETDATE()) AS Year,
+       DATEPART(MONTH, GETDATE()) AS Month,
+       DATEPART(DAY, GETDATE()) AS Day;
+7. SELECT FORMAT(GETDATE(), 'dd-MM-yyyy HH:mm') AS CustomFormat;
+8. SELECT EOMONTH(GETDATE()) AS EndOfThisMonth;
+   SELECT EOMONTH(GETDATE(), 1) AS EndOfNextMonth;
+
+
+
+
+
+   -- Sub Queries
+
+
+      1. Subquery in WHERE clause
+   Use Case: Get all employees who work in the 'IT' department.
+
+   sql
+   Copy
+   Edit
+   SELECT name
+   FROM employees
+   WHERE department_id = (
+      SELECT id FROM departments WHERE name = 'IT'
+   );
+   2. Subquery in SELECT clause
+   Use Case: List all employees with their department name.
+
+   sql
+   Copy
+   Edit
+   SELECT 
+      name,
+      (SELECT name FROM departments WHERE id = employees.department_id) AS department_name
+   FROM employees;
+
+   3. Subquery in FROM clause
+   Use Case: Get the average salary by department.
+
+   sql
+   Copy
+   Edit
+   SELECT department_id, AVG(salary) AS avg_salary
+   FROM (
+      SELECT department_id, salary FROM employees
+   ) AS dept_salaries
+   GROUP BY department_id;
+
+   4. Correlated Subquery
+   Use Case: Find employees whose salary is above the average salary of their department.
+
+   sql
+   Copy
+   Edit
+   SELECT name, salary, department_id
+   FROM employees e
+   WHERE salary > (
+      SELECT AVG(salary)
+      FROM employees
+      WHERE department_id = e.department_id
+   );
+
+
+   5. IN with Subquery
+   Use Case: Find employees who are in the 'Sales' or 'Marketing' departments.
+
+   sql
+   Copy
+   Edit
+   SELECT name
+   FROM employees
+   WHERE department_id IN (
+      SELECT id FROM departments WHERE name IN ('Sales', 'Marketing')
+   );
+
+   6. EXISTS with Subquery
+   Use Case: List departments that have at least one employee.
+
+   sql
+   Copy
+   Edit
+   SELECT name
+   FROM departments d
+   WHERE EXISTS (
+      SELECT 1 FROM employees e WHERE e.department_id = d.id
+   );
+
+
+
+
+"Server=AMANPODDAR\\SQLEXPRESS;Database=TestDB;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
+
+
+
+Indexes
+
+Types of Indexes in SQL – With Examples
+Indexes help databases retrieve data efficiently by avoiding full table scans. Below are common types of indexes with use cases and SQL examples.
+
+1. Single-Column Index
+Definition: An index created on a single column.
+sql
+CopyEdit
+CREATE INDEX idx_employee_name ON Employees(Name);
+Use:
+Speeds up:
+sql
+CopyEdit
+SELECT * FROM Employees WHERE Name = 'Alice';
+
+2. Composite Index (Multi-Column Index)
+Definition: An index on two or more columns.
+sql
+CopyEdit
+CREATE INDEX idx_emp_dept ON Employees(DepartmentID, Name);
+Use:
+Optimized for:
+sql
+CopyEdit
+SELECT * FROM Employees WHERE DepartmentID = 2 AND Name = 'Bob';
+⚠️ Order matters: It will not work efficiently for just WHERE Name = 'Bob'.
+
+3. Unique Index
+Definition: Ensures values in a column (or combination) are unique.
+sql
+CopyEdit
+CREATE UNIQUE INDEX idx_email_unique ON Employees(Email);
+Use: Prevents duplicate emails.
+4. Primary Key Index
+Definition: Automatically created on a PRIMARY KEY.
+sql
+CopyEdit
+CREATE TABLE Departments (
+    DeptID INT PRIMARY KEY,
+    Name VARCHAR(100)
+);
+Use: Enforces uniqueness and improves row lookups.
+
+5. Clustered Index
+Definition: Sorts and stores the table rows based on the key.
+Only one per table.
+sql
+CopyEdit
+CREATE CLUSTERED INDEX idx_salary ON Employees(Salary);
+Use: Efficient for range queries like:
+sql
+CopyEdit
+SELECT * FROM Employees WHERE Salary BETWEEN 50000 AND 100000;
+
+6. Non-Clustered Index
+Definition: Stores a pointer to the actual data row.
+You can have many non-clustered indexes per table.
+sql
+CopyEdit
+CREATE NONCLUSTERED INDEX idx_jobtitle ON Employees(JobTitle);
+Use: Optimized lookups for specific columns.
+7. Full-Text Index
+Definition: Enables searching within text fields.
+sql
+CopyEdit
+CREATE FULLTEXT INDEX idx_description ON Products(Description);
+Use:
+sql
+CopyEdit
+SELECT * FROM Products WHERE MATCH(Description) AGAINST ('laptop');
+
+8. Filtered Index (SQL Server only)
+Definition: Indexes only rows that meet a condition.
+sql
+CopyEdit
+CREATE INDEX idx_active_employees ON Employees(Status)
+WHERE Status = 'Active';
+Use: Faster access to filtered datasets.
+
+9. Bitmap Index (Oracle)
+Definition: Efficient for columns with few distinct values (e.g., Gender).
+sql
+CopyEdit
+-- Oracle syntax
+CREATE BITMAP INDEX idx_gender ON Employees(Gender);
+Use: Low-cardinality values (e.g., Gender, Yes/No flags).
+
+
+
+
+
+
+
+
+ MSSQL Stored Procedure Examples
+
+✅ 1. Simple Procedure (No Parameters)
+Example: Get all employees
+sql
+CopyEdit
+CREATE PROCEDURE GetAllEmployees
+AS
+BEGIN
+    SELECT * FROM Employees;
+END;
+Execution:
+sql
+CopyEdit
+EXEC GetAllEmployees;
+
+✅ 2. Procedure with Input Parameter
+Example: Get employees by department
+sql
+CopyEdit
+CREATE PROCEDURE GetEmployeesByDepartment
+    @DepartmentID INT
+AS
+BEGIN
+    SELECT * FROM Employees
+    WHERE DepartmentID = @DepartmentID;
+END;
+Execution:
+sql
+CopyEdit
+EXEC GetEmployeesByDepartment @DepartmentID = 2;
+
+✅ 3. Procedure with Multiple Input Parameters
+Example: Filter employees by department and minimum salary
+sql
+CopyEdit
+CREATE PROCEDURE GetEmployeesByDeptAndSalary
+    @DepartmentID INT,
+    @MinSalary MONEY
+AS
+BEGIN
+    SELECT * FROM Employees
+    WHERE DepartmentID = @DepartmentID
+      AND Salary >= @MinSalary;
+END;
+Execution:
+sql
+CopyEdit
+EXEC GetEmployeesByDeptAndSalary @DepartmentID = 1, @MinSalary = 50000;
+
+
+ 4. Procedure with Output Parameter
+Example: Get the total count of employees in a department
+sql
+CopyEdit
+CREATE PROCEDURE GetEmployeeCount
+    @DepartmentID INT,
+    @EmployeeCount INT OUTPUT
+AS
+BEGIN
+    SELECT @EmployeeCount = COUNT(*)
+    FROM Employees
+    WHERE DepartmentID = @DepartmentID;
+END;
+Execution and Reading Output:
+sql
+CopyEdit
+DECLARE @Count INT;
+EXEC GetEmployeeCount @DepartmentID = 3, @EmployeeCount = @Count OUTPUT;
+PRINT 'Total Employees: ' + CAST(@Count AS VARCHAR);
+
+✅ 5. Procedure with Default Parameter Value
+Example: Get employees by department, defaulting to department 1
+sql
+CopyEdit
+CREATE PROCEDURE GetEmployeesWithDefaultDept
+    @DepartmentID INT = 1
+AS
+BEGIN
+    SELECT * FROM Employees
+    WHERE DepartmentID = @DepartmentID;
+END;
+Execution:
+sql
+CopyEdit
+-- Using default (department 1)
+EXEC GetEmployeesWithDefaultDept;
+
+-- Specifying a different department
+EXEC GetEmployeesWithDefaultDept @DepartmentID = 2;
+6. Procedure with Transaction and Error Handling
+Example: Transfer salary from one employee to another
+sql
+CopyEdit
+CREATE PROCEDURE TransferSalary
+    @FromEmployeeID INT,
+    @ToEmployeeID INT,
+    @Amount MONEY
+AS
+BEGIN
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        UPDATE Employees
+        SET Salary = Salary - @Amount
+        WHERE EmployeeID = @FromEmployeeID;
+
+        UPDATE Employees
+        SET Salary = Salary + @Amount
+        WHERE EmployeeID = @ToEmployeeID;
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        ROLLBACK TRANSACTION;
+        PRINT 'Error occurred: ' + ERROR_MESSAGE();
+    END CATCH;
+END;
+Execution:
+sql
+CopyEdit
+EXEC TransferSalary @FromEmployeeID = 1, @ToEmployeeID = 2, @Amount = 500;
+
+✅ 7. Procedure Returning Result Sets and Messages
+Example: Return employee list and print a message
+sql
+CopyEdit
+CREATE PROCEDURE ShowEmployeesWithMessage
+AS
+BEGIN
+    SELECT * FROM Employees;
+    PRINT 'Employee list retrieved successfully.';
+END;
+Execution:
+sql
+CopyEdit
+EXEC ShowEmployeesWithMessage;
+✅ 8. Dropping a Stored Procedure
+Syntax:
+sql
+CopyEdit
+DROP PROCEDURE ProcedureName;
+Example:
+sql
+CopyEdit
+DROP PROCEDURE GetAllEmployees;
+
+

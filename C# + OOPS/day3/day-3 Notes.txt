@@ -1,0 +1,160 @@
+dotnet new console -n day3
+dotnet build
+dotnet run
+
+
+
+
+Arrays : is used to store multiple values of similar data types: 
+because let's say if want to store 5 employees 
+
+In c# we have different data types  
+string emp1 ="Niti";
+string emp2 ="Jatin";
+
+So array is a reference data type to store the fixed number of elements of the 
+same data type. these are stored contiguously in the memory; (array is the data structure)
+
+string[,] students = new Student[3,2];
+{
+ 0,0      0,1
+{"Niti" , 23},
+1,0       1,1
+{"Jatin" ,34},
+{"Sakshi",26}
+}
+
+
+class  is just a blue print or a template for defining the properties , attributes and methods 
+& Object --- We can access those properties , attributes and methods via creating an object of that class
+// in array we were storing similar data of single primitive type
+// in object we can store different data type of values (like int , string , boolean , char)
+properties in C#
+
+class Student
+{
+   // attributes of a classes  we call it as encapsulation means (hidden)
+    private string name;
+    private string age=18;
+
+// to access private data members of a class we use get and set and those are public
+
+    public string Name{
+
+       get{return name;}
+       set{name = value;}
+    }
+
+    or you can define it as
+
+    public string Name{get; set;};
+
+
+}
+// you have to store 5 objects of a student class having name , age and marks  
+//you want to store;
+
+
+class Student{
+
+
+public string Name{get; set;}
+public int Age{get; set;}
+public int[] subjectMarks{get; set;}
+
+
+}
+
+
+
+Student s = new Student();
+// Here Student is a class and we are creating or initializing an object using new 
+keyword of that class where we have one implicit constructor will be invoked to 
+provide the memory of the properties and setting the default values in it 
+int =0
+name = null;
+s = null;
+Student[0]  = new Student();
+Student[1] = new Student();
+Student[i]
+
+int[] stud = new int[5];
+stud[0] =10;
+
+
+--- constructor ---
+
+Rules :-
+
+ 1. constructor name and class name must be same
+ 2. constructor does not have any return type
+ 3. the moment we create an object of a class by default constructor will be invoke 
+ for eg  Student s = new Student();
+ 4. to initialize an object and the default values will be set.
+ 5. can be overloaded 
+
+
+ --- Types of constructor----
+ 1. default constructor
+ 2. Non-Parameterized constructor when developer has defined explicitly in a class.
+ 3. Parameterized constructor when we want to set some values in place of default values;
+ 4. Static constructor which is used to initilize the static variables 
+ 5. Private constructor for implemention single object creation (singleton pattern like connection obj to connect with database )
+ class Student extends Address{
+
+     int count;
+
+     Student()
+    {
+       count = 0;
+      Console.WriteLine("Static constructor called with a value as : " + count);
+    }
+
+    
+ }
+
+Student s = new Student();
+
+
+Access Specifiers in C#
+
+there are mainly 5 access Specifiers
+a) public  :  anywhere 
+b) private :  within the class  -- Encapsulation of your business data
+
+tomorrow when we will do the inheritance
+c) protected : same class + derived class 
+
+while doing the dll examples
+d) internal  : within the same project / assembly  -- use it within the same application 
+e) protected internal : same project or derived classes in any assembly(dll file)
+f) private protected :  same class or derived classes within the same assembly
+student project.dll                             Employee project.dll
+namespace data{
+class Student{                              Employee extends Student{}
+
+protected internal void input()
+{
+
+
+}
+
+
+}
+}
+
+using data
+class Teacher extends Student
+{
+
+
+
+}
+
+
+
+
+
+
+
+

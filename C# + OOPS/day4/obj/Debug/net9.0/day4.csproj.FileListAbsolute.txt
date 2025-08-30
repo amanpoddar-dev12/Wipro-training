@@ -1,0 +1,29 @@
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\bin\Debug\net9.0\day4.exe
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\bin\Debug\net9.0\day4.deps.json
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\bin\Debug\net9.0\day4.runtimeconfig.json
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\bin\Debug\net9.0\day4.dll
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\bin\Debug\net9.0\day4.pdb
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\obj\Debug\net9.0\day4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\obj\Debug\net9.0\day4.AssemblyInfoInputs.cache
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\obj\Debug\net9.0\day4.AssemblyInfo.cs
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\obj\Debug\net9.0\day4.csproj.CoreCompileInputs.cache
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\obj\Debug\net9.0\day4.dll
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\obj\Debug\net9.0\refint\day4.dll
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\obj\Debug\net9.0\day4.pdb
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\obj\Debug\net9.0\day4.genruntimeconfig.cache
+C:\Users\Niti Dwivedi\Documents\wiprotraining\day4\obj\Debug\net9.0\ref\day4.dll
+C:\Users\HP\Desktop\Wipro-training\day4\bin\Debug\net9.0\day4.exe
+C:\Users\HP\Desktop\Wipro-training\day4\bin\Debug\net9.0\day4.deps.json
+C:\Users\HP\Desktop\Wipro-training\day4\bin\Debug\net9.0\day4.runtimeconfig.json
+C:\Users\HP\Desktop\Wipro-training\day4\bin\Debug\net9.0\day4.dll
+C:\Users\HP\Desktop\Wipro-training\day4\bin\Debug\net9.0\day4.pdb
+C:\Users\HP\Desktop\Wipro-training\day4\obj\Debug\net9.0\day4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\Wipro-training\day4\obj\Debug\net9.0\day4.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Wipro-training\day4\obj\Debug\net9.0\day4.AssemblyInfo.cs
+C:\Users\HP\Desktop\Wipro-training\day4\obj\Debug\net9.0\day4.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Wipro-training\day4\obj\Debug\net9.0\day4.sourcelink.json
+C:\Users\HP\Desktop\Wipro-training\day4\obj\Debug\net9.0\day4.dll
+C:\Users\HP\Desktop\Wipro-training\day4\obj\Debug\net9.0\refint\day4.dll
+C:\Users\HP\Desktop\Wipro-training\day4\obj\Debug\net9.0\day4.pdb
+C:\Users\HP\Desktop\Wipro-training\day4\obj\Debug\net9.0\day4.genruntimeconfig.cache
+C:\Users\HP\Desktop\Wipro-training\day4\obj\Debug\net9.0\ref\day4.dll

@@ -1,0 +1,37 @@
+@model IEnumerable<CarRentalSystem.Models.Entity.Car>
+@{
+    ViewData["Title"] = "Available Cars";
+}
+
+<h2>Available Cars</h2>
+<a class="btn btn-primary" href="/Car/Add">Add New Car</a>
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Daily Rate</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model)
+        {
+            <tr>
+                <td>@car.VehicleID</td>
+                <td>@car.Make</td>
+                <td>@car.Model</td>
+                <td>@car.Year</td>
+                <td>@car.DailyRate</td>
+                <td>@car.Status</td>
+                <td>
+                    <a class="btn btn-info" href="/Car/Details/@car.VehicleID">Details</a>
+                    <a class="btn btn-danger" href="/Car/Delete/@car.VehicleID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

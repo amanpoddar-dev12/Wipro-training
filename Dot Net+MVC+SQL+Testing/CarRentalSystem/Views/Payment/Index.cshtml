@@ -1,0 +1,23 @@
+@model IEnumerable<CarRentalSystem.Models.Entity.Payment>
+<h2>Payment History</h2>
+<table class="table table-dark mt-3">
+    <thead>
+        <tr>
+            <th>Payment ID</th>
+            <th>Lease ID</th>
+            <th>Date</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.PaymentID</td>
+                <td>@p.LeaseID</td>
+                <td>@p.PaymentDate.ToShortDateString()</td>
+                <td>@p.Amount</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,220 @@
+what is a Framework :
+It is a software  or it is a collection of many small technologies integrated together to develop applications that can be 
+executed anywhere 
+
+.Net Framework : Library :-  collection of some predefined classes , methods , properties ( .Net package)  
+NuGet is a package manager built specifically  for .NET that contains over no. of package
+It is providing two things
+1) BCL ( Base Class Libraries)
+2) CLR ( Common Language Runtime)
+
+BCL :- It is a basic building block of .Net Programs  .These are installed into the machine when we installed the .NET Framework . (SDK) BCL provides predefined classes and these classes are used for the purpose of APPL DEV.
+
+C:/windows/assembly
+
+CLR :-  It is a core component under the .Net Framework which is responsible for converting the MSIL ( Microsoft Intermediate
+Language) code into native code  .
+
+Source code -> Language compiler  --> MSIL / IL / Managed Code (.dll)(IL Disassembler after disassembling it will be .IL)--> CLR (JIT) -- > Native code(Any OS) -->  Execute
+
+MSIL is a managed code converted by the compiler from HLL and understand by the CLR 
+Then CLR with the help of JIT it get converted into the native code which OS can understand
+JIT is a component of CLR that is responsible for converting MSIL code into Native Code 
+
+
+C# Source code(.cs) -> Language C# compiler(Roslyn)  --> MSIL / IL / Managed Code / CIL --> CLR (JIT) -- > Native code(Any OS) -->  Execute (by OS + CPU ( register / Scheduling of your task) 
+
+Two extensions we have 
+Executable  == .exe
+Library === .DLL 
+
+
+APPlications :
+
+Desktops
+Web app
+Mobile apps
+APIs
+
+1. .Net Framework    -- 2002    ,  supported by windows -only(by default you get when you install windows OS)
+                     -- Desktop applications (WinForms , WPF , ASP.Net)
+                     -- slow 
+                     -- Monolithic
+2. .Net Core / .Net --   .Net Core  --2016 , .net 5 -- 2020  ,, Cross-Platform 
+                    --   Desktop, Asp.net core, Console ,cloud,Mobile
+                    --    Fast
+                    -- Microservices supported(Distributed)
+
+Both of them are using some common c# library 
+
+
+For Modern/Enterprise level applicaions :
+1. Visual Studio 2022  ( Community edition is free)/ vscode editor
+2. .Net SDK 
+
+Includes: .NET CLI Commands (dotnet new  , dotnet build , dotnet run) -- To create a .net desktop c# application 
+           ASP.NET  core 
+           Blazor
+
+
+For legacy/Enterprise or Windows -Only apps:
+1. Visual studio 2022/vscode editor
+2. Add .Net framework  (by default you get with visual studio code editor , or windows os)
+
+
+C# Web APP (.Net Framework) -- IT will run on windows Server/ IIS
+C# web APP(.Net core ) --  can run on cloud platforms like azure , docker etc...
+ 
+
+Conventions to follow while writing a C# program
+1.  class name  :  User
+2.  method name : AddOperations()
+3.  local variable : camel case  : userName, password
+
+
+
+Data Types:
+
+value data types 		Pointer Data Type		Reference Data Type
+
+predefined	userdefined		 		            predefined	userdefined
+
+Integer		Enumeration					    Objects 	Class
+Boolean		Structure					    Strings		Interface
+Float
+Char
+
+short = Int16
+int = Int32
+long = Int64 
+
+
+using System; //package name -- > imported the built in package
+
+namespace CalculatorOperations // --> namespace declaration
+
+{
+
+    internal class Program
+    {
+        //main is the entry point of your program
+        static void Main(string[] args)
+        {
+
+          //  unsafe
+            {
+                int number = 456;
+                //   int* ptr = &number;
+
+                int a ;
+                int b ;
+                string s = "Hello";
+                char ch = 'B';
+                //Int16
+                short num1 = 234;
+                //Int32
+
+                //Int64 
+                long num = 5767;
+
+                double price = 45.00;
+
+                Decimal marks = 45.7M;
+
+                Console.WriteLine($"Value : {number} ");
+             //   Console.WriteLine($"The address : {(int)ptr}");
+
+
+                Console.WriteLine("Char : " + ch);
+                Console.WriteLine("Equivalent Number : " + (byte)ch);
+                Console.WriteLine("The minimum and maximum value size : " + char.MinValue + " " + char.MaxValue);
+                Console.WriteLine("The char size : " + sizeof(char));
+
+                Console.WriteLine("Sum of 2 numbers : " + (a+b));
+                Console.ReadKey();
+            }
+        }
+
+
+    }
+}
+
+
+using System; //package name -- > imported the built in package
+
+namespace CalculatorOperations // --> namespace declaration
+
+{
+
+    internal class Program
+    {
+        //main is the entry point of your program
+        static void Main(string[] args)
+        {
+
+          //  unsafe
+            {
+              //  int number = 456;
+                //   int* ptr = &number;
+
+                int a ;
+                int b ;
+
+
+
+
+                //   Console.WriteLine($"Value : {number} ");
+                //   Console.WriteLine($"The address : {(int)ptr}");
+
+
+
+                Console.WriteLine("Enter the first number : ");
+                a =  Convert.ToInt32(Console.ReadLine());
+                   Console.WriteLine("Enter the second number : ");
+                b =  Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Sum of 2 numbers : " + (a+b));
+                Console.ReadKey();
+            }
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9.0.1
+9.0.2
+9.0.3
+
+9.1.0
+9.1.1
+
+10.0.0
+10.0.1
+
+

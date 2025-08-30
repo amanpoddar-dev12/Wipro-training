@@ -1,0 +1,28 @@
+@model IEnumerable<CarRentalSystem.Models.Entity.Lease>
+<h2>Active Leases</h2>
+<a class="btn btn-primary" href="/Lease/Create">Create Lease</a>
+<table class="table table-hover mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Car ID</th>
+            <th>Customer ID</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var lease in Model)
+        {
+            <tr>
+                <td>@lease.LeaseID</td>
+                <td>@lease.VehicleID</td>
+                <td>@lease.CustomerID</td>
+                <td>@lease.StartDate.ToShortDateString()</td>
+                <td>@lease.EndDate.ToShortDateString()</td>
+                <td>@lease.Type</td>
+            </tr>
+        }
+    </tbody>
+</table>

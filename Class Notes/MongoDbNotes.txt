@@ -1,0 +1,22 @@
+Create
+javascript
+CopyEdit
+db.collection.insertOne({ key: "value" })
+db.collection.insertMany([{...}, {...}])
+Read
+javascript
+CopyEdit
+db.collection.find()                             // Returns all documents
+db.collection.find({ key: "value" })             // Filter documents
+db.collection.findOne({ key: "value" })          // Returns one matching document
+Update
+javascript
+CopyEdit
+db.collection.updateOne({ key: "value" }, { $set: { key2: "new" } })
+db.collection.updateMany({ key: "value" }, { $set: { key2: "new" } })
+db.collection.replaceOne({ key: "value" }, { newDoc })
+Delete
+javascript
+CopyEdit
+db.collection.deleteOne({ key: "value" })
+db.collection.deleteMany({ key: "value" })

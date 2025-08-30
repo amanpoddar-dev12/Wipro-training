@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": ""
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "My First Post",
+      "content": "This is the content of my first post.",
+      "userId": 1
+    }
+  ]
+}

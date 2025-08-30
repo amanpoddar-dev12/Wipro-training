@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|c:\\users\\hp\\desktop\\wipro-training\\testfrontend\\testfrontend\\views\\home\\htmlpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|solutionrelative:testfrontend\\views\\home\\htmlpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|c:\\users\\hp\\desktop\\wipro-training\\testfrontend\\testfrontend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|solutionrelative:testfrontend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|c:\\users\\hp\\desktop\\wipro-training\\testfrontend\\testfrontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|solutionrelative:testfrontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|c:\\users\\hp\\desktop\\wipro-training\\testfrontend\\testfrontend\\views\\home\\test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|solutionrelative:testfrontend\\views\\home\\test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|c:\\users\\hp\\desktop\\wipro-training\\testfrontend\\testfrontend\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|solutionrelative:testfrontend\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|c:\\users\\hp\\desktop\\wipro-training\\testfrontend\\testfrontend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|solutionrelative:testfrontend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|c:\\users\\hp\\desktop\\wipro-training\\testfrontend\\testfrontend\\wwwroot\\bootstrap\\css\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4DE2015C-B335-4E23-9D43-EF9EEC4C4E54}|TestFrontend\\TestFrontend.csproj|solutionrelative:testfrontend\\wwwroot\\bootstrap\\css\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "TestFrontend\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "TestFrontend\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-05T05:47:26.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "htmlpage.html",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\Views\\Home\\htmlpage.html",
+              "RelativeDocumentMoniker": "TestFrontend\\Views\\Home\\htmlpage.html",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\Views\\Home\\htmlpage.html",
+              "RelativeToolTip": "TestFrontend\\Views\\Home\\htmlpage.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-05T04:48:43.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "TestFrontend\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "TestFrontend\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-05T04:47:05.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "test.html",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\Views\\Home\\test.html",
+              "RelativeDocumentMoniker": "TestFrontend\\Views\\Home\\test.html",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\Views\\Home\\test.html",
+              "RelativeToolTip": "TestFrontend\\Views\\Home\\test.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-05T04:46:56.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\appsettings.json",
+              "RelativeDocumentMoniker": "TestFrontend\\appsettings.json",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\appsettings.json",
+              "RelativeToolTip": "TestFrontend\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-05T04:29:09.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TestFrontend\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TestFrontend\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-05T04:26:15.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "bootstrap.min.css",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\wwwroot\\bootstrap\\css\\bootstrap.min.css",
+              "RelativeDocumentMoniker": "TestFrontend\\wwwroot\\bootstrap\\css\\bootstrap.min.css",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Wipro-training\\TestFrontend\\TestFrontend\\wwwroot\\bootstrap\\css\\bootstrap.min.css",
+              "RelativeToolTip": "TestFrontend\\wwwroot\\bootstrap\\css\\bootstrap.min.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-05T04:26:05.236Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
