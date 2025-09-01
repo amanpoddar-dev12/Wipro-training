@@ -24,21 +24,25 @@ export class PropertyDetailsComponent implements OnInit {
       next: (res: any) => {
         this.property = res;
 
-        // ✅ If backend sends array → assign directly
+       
         if (Array.isArray(this.property.images)) {
           this.images = this.property.images.map((img: string) => img.trim());
-        }
-        // ✅ If backend sends string → split by comma
-        else if (typeof this.property.images === 'string') {
-          this.images = this.property.images.split(',').map((img: string) => img.trim());
+        } else if (typeof this.property.images === 'string') {
+          this.images = this.property.images
+            .split(',')
+            .map((img: string) => img.trim())
+            .filter((img: string) => img.length > 0);
+        } else {
+          this.images = [];
         }
 
-        console.log("Parsed images:", this.images);
+        console.log("Images prepared for carousel:", this.images);
       },
       error: (err) => console.error('Failed to load property', err)
     });
   }
 }
+
 
 
   reserveProperty() {

@@ -11,6 +11,7 @@ import { SelectedPropertiesService } from '../../services/selected-properties.se
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+  
 export class HomeComponent implements OnInit {
   properties: any[] = [];
   topRatedByCategory: any[] = [];
@@ -30,6 +31,7 @@ selectProperty(property: any) {
   ngOnInit(): void {
     this.http.get<any[]>(this.apiUrl).subscribe({
       next: (res) => (this.properties = res),
+      
       error: (err) => console.error('Failed to load properties', err)
     });
      this.http.get<any[]>(`${this.apiUrl}/top-rated`).subscribe({

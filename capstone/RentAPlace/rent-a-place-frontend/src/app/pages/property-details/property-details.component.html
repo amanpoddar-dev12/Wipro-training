@@ -6,27 +6,38 @@
   <p><b>Features:</b> {{ property.features }}</p>
   <p><b>Rating:</b> ⭐ {{ property.rating }}</p>
 
-  <!-- ✅ Bootstrap Carousel for images -->
- <div id="propertyCarousel" class="carousel slide mb-4" *ngIf="images.length > 0">
-  <div class="carousel-inner">
-    <div *ngFor="let img of images; let i = index"
-         class="carousel-item"
-         [class.active]="i === 0">
-      <img [src]="img"
-           class="d-block w-100"
-           alt="Property image"
-           style="height: 400px; object-fit: cover;">
+  <!-- ✅ Carousel -->
+  <div id="propertyCarousel" class="carousel slide mb-4" *ngIf="images.length > 0">
+    
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button *ngFor="let img of images; let i = index"
+              type="button"
+              data-bs-target="#propertyCarousel"
+              [attr.data-bs-slide-to]="i"
+              [class.active]="i === 0"
+              [attr.aria-current]="i === 0 ? 'true' : null"
+              [attr.aria-label]="'Slide ' + (i + 1)">
+      </button>
     </div>
+
+    <!-- Slides -->
+   <div class="carousel-inner">
+  <div *ngFor="let img of images; let i = index"
+       class="carousel-item"
+       [class.active]="i === 0">
+    <img [src]="img" class="d-block w-100" alt="Property image" style="height: 400px; object-fit: cover;">
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
 </div>
 
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
 
-  <!-- ✅ Reserve button -->
   <button class="btn btn-success mt-3" (click)="reserveProperty()">Reserve Now</button>
 </div>

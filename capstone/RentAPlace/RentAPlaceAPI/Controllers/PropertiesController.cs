@@ -18,7 +18,6 @@ namespace RentAPlaceAPI.Controllers
             _context = context;
         }
 
-        // ✅ Public: Anyone can see all properties
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> GetProperties()
@@ -27,7 +26,6 @@ namespace RentAPlaceAPI.Controllers
             return Ok(props);
         }
 
-        // ✅ Public: Anyone can see a single property
         [HttpGet("{id}")]
         [AllowAnonymous]
         public async Task<IActionResult> GetProperty(int id)
@@ -36,8 +34,10 @@ namespace RentAPlaceAPI.Controllers
                 .FirstOrDefaultAsync(p => p.PropertyId == id);
 
             if (property == null) return NotFound();
+
             return Ok(property);
         }
+
 
         // ✅ Only Owner/Admin can add
         [HttpPost]

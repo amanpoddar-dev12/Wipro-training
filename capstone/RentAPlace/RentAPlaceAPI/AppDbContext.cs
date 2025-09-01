@@ -60,6 +60,9 @@ namespace RentAPlaceAPI.Data
             modelBuilder.Entity<Property>()
                 .Property(p => p.PricePerNight)
                 .HasPrecision(10, 2);
+            base.OnModelCreating(modelBuilder);
+
+
         }
     }
 }
