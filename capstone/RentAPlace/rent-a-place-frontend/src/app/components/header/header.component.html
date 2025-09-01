@@ -10,9 +10,13 @@
 
     <ng-template #loggedInMenu>
       <!-- Show different links based on role -->
+       <li class="nav-item"><a class="nav-link" routerLink="/search">Search</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/selected-properties">Selected</a></li>
+
       <li class="nav-item" *ngIf="authService.getRole() === 'Admin'">
         <a class="nav-link" routerLink="/admin-dashboard">Admin Dashboard</a>
       </li>
+
       <li class="nav-item" *ngIf="authService.getRole() === 'Owner'">
         <a class="nav-link" routerLink="/owner-dashboard">Owner Dashboard</a>
       </li>

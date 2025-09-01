@@ -9,7 +9,6 @@ namespace RentAPlaceAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "Owner,Admin")] // Owners manage their own, Admin can manage all
     public class PropertiesController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -19,27 +18,30 @@ namespace RentAPlaceAPI.Controllers
             _context = context;
         }
 
-        // GET: api/properties
+        // ✅ Public: Anyone can see all properties
         [HttpGet]
-        [AllowAnonymous] // anyone can view properties
+        [AllowAnonymous]
         public async Task<IActionResult> GetProperties()
         {
             var props = await _context.Properties.Include(p => p.Owner).ToListAsync();
             return Ok(props);
         }
 
-        // GET: api/properties/5
+        // ✅ Public: Anyone can see a single property
         [HttpGet("{id}")]
         [AllowAnonymous]
         public async Task<IActionResult> GetProperty(int id)
         {
-            var property = await _context.Properties.Include(p => p.Owner).FirstOrDefaultAsync(p => p.PropertyId == id);
+            var property = await _context.Properties.Include(p => p.Owner)
+                .FirstOrDefaultAsync(p => p.PropertyId == id);
+
             if (property == null) return NotFound();
             return Ok(property);
         }
 
-        // POST: api/properties
+        // ✅ Only Owner/Admin can add
         [HttpPost]
+        [Authorize(Roles = "Owner,Admin")]
         public async Task<IActionResult> AddProperty(Property property)
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier) ?? "0");
@@ -50,14 +52,14 @@ namespace RentAPlaceAPI.Controllers
             return Ok(property);
         }
 
-        // PUT: api/properties/5
+        // ✅ Only Owner/Admin can update
         [HttpPut("{id}")]
+        [Authorize(Roles = "Owner,Admin")]
         public async Task<IActionResult> UpdateProperty(int id, Property updated)
         {
             var property = await _context.Properties.FindAsync(id);
             if (property == null) return NotFound();
 
-            // Only owner or admin can update
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier) ?? "0");
             if (property.OwnerId != userId && !User.IsInRole("Admin"))
                 return Forbid();
@@ -69,13 +71,15 @@ namespace RentAPlaceAPI.Controllers
             property.Features = updated.Features;
             property.PricePerNight = updated.PricePerNight;
             property.Images = updated.Images;
+            property.Rating = updated.Rating;
 
             await _context.SaveChangesAsync();
             return Ok(property);
         }
 
-        // DELETE: api/properties/5
+        // ✅ Only Owner/Admin can delete
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Owner,Admin")]
         public async Task<IActionResult> DeleteProperty(int id)
         {
             var property = await _context.Properties.FindAsync(id);
@@ -89,5 +93,90 @@ namespace RentAPlaceAPI.Controllers
             await _context.SaveChangesAsync();
             return Ok(new { message = "Property deleted" });
         }
+
+        // ✅ Public: Top-rated properties
+        [HttpGet("top-rated")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetTopRated()
+        {
+            var grouped = await _context.Properties
+                .OrderByDescending(p => p.Rating)
+                .GroupBy(p => p.Type) // group by category (Villa, Apartment, etc.)
+                .Select(g => new
+                {
+                    Category = g.Key,
+                    Properties = g.Take(5) // top 5 per category
+                        .Select(p => new
+                        {
+                            p.PropertyId,
+                            p.Title,
+                            p.Type,
+                            p.Location,
+                            p.PricePerNight,
+                            p.Rating,
+                            p.Images
+                        })
+                        .ToList()
+                })
+                .ToListAsync();
+
+            return Ok(grouped);
+        }
+
+
+        [HttpGet("search")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Search(
+    [FromQuery] string? location,
+    [FromQuery] string? type,
+    [FromQuery] string? features,
+    [FromQuery] DateTime? checkIn,
+    [FromQuery] DateTime? checkOut)
+        {
+            try
+            {
+                var query = _context.Properties
+                    .Include(p => p.Reservations) // ✅ include reservations
+                    .AsQueryable();
+
+                if (!string.IsNullOrWhiteSpace(location))
+                    query = query.Where(p => p.Location.Contains(location));
+
+                if (!string.IsNullOrWhiteSpace(type))
+                    query = query.Where(p => p.Type.Contains(type));
+
+                if (!string.IsNullOrWhiteSpace(features))
+                    query = query.Where(p => p.Features != null && p.Features.Contains(features));
+
+                // ✅ Filter by availability (exclude properties already reserved in the date range)
+                if (checkIn.HasValue && checkOut.HasValue)
+                {
+                    query = query.Where(p => !p.Reservations.Any(r =>
+                        (checkIn.Value < r.CheckOut && checkOut.Value > r.CheckIn)
+                    ));
+                }
+
+                var results = await query
+                    .OrderByDescending(p => p.Rating)
+                    .Select(p => new
+                    {
+                        p.PropertyId,
+                        p.Title,
+                        p.Type,
+                        p.Location,
+                        p.PricePerNight,
+                        p.Rating,
+                        p.Images
+                    })
+                    .ToListAsync();
+
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = "Search failed", error = ex.Message });
+            }
+        }
+
     }
 }

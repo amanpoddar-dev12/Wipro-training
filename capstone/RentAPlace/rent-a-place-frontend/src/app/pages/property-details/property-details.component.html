@@ -1,7 +1,32 @@
 <div class="container mt-5" *ngIf="property">
   <h2>{{ property.title }}</h2>
   <p><b>Location:</b> {{ property.location }}</p>
+  <p><b>Type:</b> {{ property.type }}</p>
   <p><b>Price per night:</b> ₹{{ property.pricePerNight }}</p>
-  <p>{{ property.description }}</p>
-  <button class="btn btn-success" (click)="reserveProperty()">Reserve</button>
+  <p><b>Features:</b> {{ property.features }}</p>
+  <p><b>Rating:</b> ⭐ {{ property.rating }}</p>
+
+  <!-- ✅ Bootstrap Carousel for images -->
+ <div id="propertyCarousel" class="carousel slide mb-4" *ngIf="images.length > 0">
+  <div class="carousel-inner">
+    <div *ngFor="let img of images; let i = index"
+         class="carousel-item"
+         [class.active]="i === 0">
+      <img [src]="img"
+           class="d-block w-100"
+           alt="Property image"
+           style="height: 400px; object-fit: cover;">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+
+  <!-- ✅ Reserve button -->
+  <button class="btn btn-success mt-3" (click)="reserveProperty()">Reserve Now</button>
 </div>

@@ -1,0 +1,62 @@
+<div class="container mt-5">
+  <h2 class="text-center">🔎 Search Properties</h2>
+  <form (ngSubmit)="search()" class="row g-3 mt-3">
+    <div class="col-md-2">
+      <input type="text" [(ngModel)]="location" name="location" class="form-control" placeholder="Location">
+    </div>
+    <div class="col-md-2">
+      <select [(ngModel)]="type" name="type" class="form-control">
+        <option value="">-- Type --</option>
+        <option>Villa</option>
+        <option>Apartment</option>
+        <option>Flat</option>
+        <option>Cottage</option>
+        <option>Guest House</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <input type="text" [(ngModel)]="features" name="features" class="form-control" placeholder="Features (Pool)">
+    </div>
+    <div class="col-md-2">
+      <input type="date" [(ngModel)]="checkIn" name="checkIn" class="form-control">
+    </div>
+    <div class="col-md-2">
+      <input type="date" [(ngModel)]="checkOut" name="checkOut" class="form-control">
+    </div>
+    <div class="col-md-2 d-grid">
+      <button class="btn btn-primary">Search</button>
+    </div>
+  </form>
+
+  <hr class="my-4">
+
+  <!-- ✅ No results message -->
+  <div *ngIf="results && results.length === 0" class="text-center text-muted mt-4">
+    <p>No properties found matching your criteria.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let property of results">
+      <div class="card shadow-sm mb-3">
+        <img [src]="property.images?.split(',')[0] || 'https://via.placeholder.com/400x200'" 
+             class="card-img-top" alt="Property">
+        <div class="card-body">
+          <h5 class="card-title">{{ property.title }}</h5>
+          <p>{{ property.location }} - {{ property.type }}</p>
+          <p class="fw-bold">₹{{ property.pricePerNight }}</p>
+          <div class="d-flex align-items-center mt-2">
+            <span class="badge bg-warning text-dark me-3">⭐ {{ property.rating }}</span>
+            <a [routerLink]="['/property', property.propertyId]" class="btn btn-primary btn-sm">
+              View Details
+            </a>
+          </div>
+          <button class="btn btn-outline-primary btn-sm mt-2"
+        (click)="selectProperty(property)">
+  Select Property
+</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <h2 class="text-center">⭐ Selected Properties</h2>
+
+  <div *ngIf="selected.length === 0" class="text-center text-muted mt-4">
+    <p>No properties selected yet.</p>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-4" *ngFor="let property of selected">
+      <div class="card shadow-sm mb-3">
+        <img [src]="property.images?.split(',')[0] || 'https://via.placeholder.com/400x200'"
+             class="card-img-top" alt="Property">
+        <div class="card-body">
+          <h5 class="card-title">{{ property.title }}</h5>
+          <p>{{ property.location }} - {{ property.type }}</p>
+          <p class="fw-bold">₹{{ property.pricePerNight }}</p>
+          <span class="badge bg-warning text-dark">⭐ {{ property.rating }}</span>
+          <div class="d-flex justify-content-between mt-2">
+            <a [routerLink]="['/property', property.propertyId]" class="btn btn-primary btn-sm">View Details</a>
+            <button class="btn btn-danger btn-sm" (click)="remove(property.propertyId)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

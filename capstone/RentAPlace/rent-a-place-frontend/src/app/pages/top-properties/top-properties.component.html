@@ -1,0 +1,33 @@
+<div class="col container mt-4">
+  <h2 class="text-center">🏆 Top Rated Properties by Category</h2>
+
+  <div *ngFor="let group of topRatedByCategory" class="mt-4">
+    <h3 class="mb-3">{{ group.category }}</h3>
+
+    <!-- horizontal scroll container -->
+    <div class="horizontal-scroll d-flex align-items-stretch gap-3 py-2">
+      <div *ngFor="let prop of group.properties" class="d-flex" style="min-width: 240px; max-width: 260px;">
+        <div class="card shadow-sm mb-0 property-card w-100 h-100">
+          <img [src]="prop.images?.split(',')[0] || 'https://via.placeholder.com/400x200'"
+               class="card-img-top property-card-img" alt="Property">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-truncate">{{ prop.title }}</h5>
+            <p class="card-text mb-1 text-muted small">{{ prop.location }}</p>
+            <p class="fw-bold mb-2">₹{{ prop.pricePerNight }}</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <span class="badge bg-warning text-dark">⭐ {{ prop.rating }}</span>
+              <a [routerLink]="['/property', prop.propertyId]" class="btn btn-primary btn-sm">View</a>
+            </div>
+            <button class="btn btn-outline-primary btn-sm mt-2"
+        (click)="selectProperty(selectProperty)">
+  Select Property
+</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end horizontal scroll container -->
+
+  </div>
+</div>

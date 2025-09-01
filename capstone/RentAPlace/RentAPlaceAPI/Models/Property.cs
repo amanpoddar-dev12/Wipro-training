@@ -15,6 +15,7 @@ namespace RentAPlaceAPI.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         // Navigation properties
+        // public int OwnerId { get; set; }
         public User? Owner { get; set; }
         public ICollection<Reservation>? Reservations { get; set; }
         public ICollection<Message>? Messages { get; set; }

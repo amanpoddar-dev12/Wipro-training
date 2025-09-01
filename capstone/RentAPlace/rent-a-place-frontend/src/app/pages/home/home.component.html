@@ -1,18 +1,38 @@
+
+<div class="container mt-5">
+
+
+  <div class="text-center my-4">
+    <button class="btn btn-primary" (click)="toggleTop()">
+      {{ showTop ? 'Hide Top Properties' : 'Show Top Properties' }}
+    </button>
+  </div>
+
+  <app-top-properties *ngIf="showTop"></app-top-properties>
+</div>
+
 <div class="container mt-5">
   <h2 class="text-center">Available Properties</h2>
   <div class="row mt-4">
     <div class="col-md-4" *ngFor="let property of properties">
       <div class="card shadow-sm mb-3">
-        <img [src]="property.images || 'https://via.placeholder.com/400x200'"
-             class="card-img-top"
-             alt="Property">
+        <img [src]="property.images || 'https://via.placeholder.com/400x200'" 
+             class="card-img-top" alt="Property">
         <div class="card-body">
           <h5 class="card-title">{{ property.title }}</h5>
           <p class="card-text">{{ property.location }}</p>
           <p class="fw-bold">₹{{ property.pricePerNight }}</p>
-          <a [routerLink]="['/property', property.propertyId]" class="btn btn-primary btn-sm">View Details</a>
+          <span class="badge bg-success">⭐ {{ property.rating }}</span>
+           <a [routerLink]="['/property', property.propertyId]" class="btn btn-primary btn-sm">View Details</a>
         </div>
+        <button class="btn btn-outline-primary btn-sm mt-2"
+        (click)="selectProperty(property)">
+  Select Property
+</button>
+
       </div>
     </div>
-  </div>
-</div>
+  
+
+
+
