@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fullstackjobportal", "fullstackjobportal", "{AE99F623-9BC9-7B80-0844-8EE8AAF43960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobPortalAPI", "fullstackjobportal\JobPortalAPI\JobPortalAPI.csproj", "{804224A2-2FFB-2B12-22B4-5EB7BDCC4C1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{804224A2-2FFB-2B12-22B4-5EB7BDCC4C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804224A2-2FFB-2B12-22B4-5EB7BDCC4C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804224A2-2FFB-2B12-22B4-5EB7BDCC4C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804224A2-2FFB-2B12-22B4-5EB7BDCC4C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{804224A2-2FFB-2B12-22B4-5EB7BDCC4C1D} = {AE99F623-9BC9-7B80-0844-8EE8AAF43960}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44CFF907-F999-40F9-B513-9CE3E6FFE379}
+	EndGlobalSection
+EndGlobal

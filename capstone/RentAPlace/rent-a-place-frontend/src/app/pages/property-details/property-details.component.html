@@ -1,0 +1,7 @@
+<div class="container mt-5" *ngIf="property">
+  <h2>{{ property.title }}</h2>
+  <p><b>Location:</b> {{ property.location }}</p>
+  <p><b>Price per night:</b> ₹{{ property.pricePerNight }}</p>
+  <p>{{ property.description }}</p>
+  <button class="btn btn-success" (click)="reserveProperty()">Reserve</button>
+</div>

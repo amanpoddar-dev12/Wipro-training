@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <h2>My Reservations</h2>
+  <table class="table table-bordered mt-3" *ngIf="reservations.length > 0">
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Check-In</th>
+        <th>Check-Out</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of reservations">
+        <td>{{ r.property?.title }}</td>
+        <td>{{ r.checkIn | date }}</td>
+        <td>{{ r.checkOut | date }}</td>
+        <td>{{ r.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="reservations.length === 0">No reservations found.</p>
+</div>

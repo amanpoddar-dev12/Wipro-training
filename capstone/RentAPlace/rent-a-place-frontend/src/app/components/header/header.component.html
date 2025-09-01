@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <a class="navbar-brand" routerLink="/">🏠 RentAPlace</a>
+  <ul class="navbar-nav ms-auto">
+    <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
+
+    <ng-container *ngIf="!authService.isLoggedIn(); else loggedInMenu">
+      <li class="nav-item"><a class="nav-link" routerLink="/login">Login</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/register">Register</a></li>
+    </ng-container>
+
+    <ng-template #loggedInMenu>
+      <!-- Show different links based on role -->
+      <li class="nav-item" *ngIf="authService.getRole() === 'Admin'">
+        <a class="nav-link" routerLink="/admin-dashboard">Admin Dashboard</a>
+      </li>
+      <li class="nav-item" *ngIf="authService.getRole() === 'Owner'">
+        <a class="nav-link" routerLink="/owner-dashboard">Owner Dashboard</a>
+      </li>
+      <li class="nav-item" *ngIf="authService.getRole() === 'User'">
+        <a class="nav-link" routerLink="/properties">Browse Properties</a>
+      </li>
+      <li class="nav-item"><a class="nav-link" (click)="logout()">Logout</a></li>
+    </ng-template>
+  </ul>
+</nav>

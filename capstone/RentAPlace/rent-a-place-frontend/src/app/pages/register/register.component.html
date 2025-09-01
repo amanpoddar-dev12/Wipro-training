@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <h3 class="text-center">Register</h3>
+      <form (ngSubmit)="register()">
+        <div class="form-group mb-3">
+          <label>Name</label>
+          <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Enter name" required>
+        </div>
+        <div class="form-group mb-3">
+          <label>Email</label>
+          <input type="email" [(ngModel)]="email" name="email" class="form-control" placeholder="Enter email" required>
+        </div>
+        <div class="form-group mb-3">
+          <label>Password</label>
+          <input type="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Enter password" required>
+        </div>
+        <div class="form-group mb-3">
+          <label>Role</label>
+          <select [(ngModel)]="role" name="role" class="form-control">
+            <option>User</option>
+            <option>Owner</option>
+          </select>
+        </div>
+        <button class="btn btn-success w-100">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
