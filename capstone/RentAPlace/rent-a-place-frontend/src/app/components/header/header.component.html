@@ -1,34 +1,66 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-  <a class="navbar-brand" routerLink="/">🏠 RentAPlace</a>
-  <ul class="navbar-nav ms-auto">
-    <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
+<nav class="navbar navbar-expand-lg bg-dark text-white px-4 shadow">
+  <a class="navbar-brand fw-bold text-white d-flex align-items-center" routerLink="/">
+    <span class="me-2"></span> RentAPlace
+  </a>
+  <button
+    class="navbar-toggler border-0"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <ng-container *ngIf="!authService.isLoggedIn(); else loggedInMenu">
-      <li class="nav-item"><a class="nav-link" routerLink="/login">Login</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="/register">Register</a></li>
-    </ng-container>
-
-    <ng-template #loggedInMenu>
-   
-       <li class="nav-item"><a class="nav-link" routerLink="/search">Search</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="/selected-properties">Selected</a></li>
-
-      <li class="nav-item"><a class="nav-link" *ngIf="authService.getRole() === 'User'" routerLink="/user-inbox">User Inbox</a></li>
-
-        <li class="nav-item"><a class="nav-link" *ngIf="authService.getRole() === 'Owner'" routerLink="/owner-inbox">Owner Inbox</a></li>
-
-         <li class="nav-item" *ngIf="authService.getRole() === 'User'">
-        <a class="nav-link" routerLink="/my-reservations">Reservation</a>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav align-items-lg-center gap-lg-3">
+      <li class="nav-item">
+        <a class="nav-link text-white fw-semibold hover-opacity" routerLink="/">Home</a>
       </li>
- 
-      <li class="nav-item" *ngIf="authService.getRole() === 'Owner'">
-        <a class="nav-link" routerLink="/owner-reservations">Reservations</a>
-      </li>
+
+      <ng-container *ngIf="!authService.isLoggedIn(); else loggedInMenu">
+        <li class="nav-item">
+          <a class="btn btn-outline-light rounded-pill px-3" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-light text-dark rounded-pill px-3 ms-lg-2 mt-2 mt-lg-0" routerLink="/register">Register</a>
+        </li>
+      </ng-container>
+
+      <ng-template #loggedInMenu>
+        <li class="nav-item">
+          <a class="nav-link text-white fw-semibold hover-opacity" routerLink="/search">Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fw-semibold hover-opacity" routerLink="/selected-properties">Selected</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.getRole() === 'User'">
+          <a class="nav-link text-white fw-semibold hover-opacity" routerLink="/user-inbox">User Inbox</a>
+        </li>
         <li class="nav-item" *ngIf="authService.getRole() === 'Owner'">
-        <a class="nav-link" routerLink="/my-properties">My Properties</a>
-      </li>
-
-      <li class="nav-item"><a class="nav-link" (click)="logout()">Logout</a></li>
-    </ng-template>
-  </ul>
+          <a class="nav-link text-white fw-semibold hover-opacity" routerLink="/owner-inbox">Owner Inbox</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.getRole() === 'User'">
+          <a class="nav-link text-white fw-semibold hover-opacity" routerLink="/my-reservations">Reservation</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.getRole() === 'Owner'">
+          <a class="nav-link text-white fw-semibold hover-opacity" routerLink="/owner-reservations">Reservations</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.getRole() === 'Owner'">
+          <a class="nav-link text-white fw-semibold hover-opacity" routerLink="/my-properties">My Properties</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-danger rounded-pill px-3 ms-lg-3 mt-2 mt-lg-0" (click)="logout()">Logout</a>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
 </nav>
+
+<style>
+  .hover-opacity:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+</style>

@@ -31,7 +31,7 @@ export class RegisterComponent {
     this.http.post(this.apiUrl, body).subscribe({
       next: (res) => {
         alert('✅ Registered successfully! Now you can login.');
-        this.router.navigate(['/login']);
+        this.router.navigate(['/home']);
       },
       error: (err) => {
         alert('❌ Registration failed: ' + (err.error || err.message));

@@ -1,0 +1,6 @@
+.toast {
+  border-radius: 12px;
+  font-size: 15px;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}

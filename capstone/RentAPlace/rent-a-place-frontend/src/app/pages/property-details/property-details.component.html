@@ -1,37 +1,88 @@
-<app-message-user [propertyId]="property.propertyId"></app-message-user>
 
 <div class="container mt-5" *ngIf="property">
-  
-  <h2>{{ property.title }}</h2>
-  <p><b>Location:</b> {{ property.location }}</p>
-  <p><b>Type:</b> {{ property.type }}</p>
-  <p><b>Price per night:</b> ₹{{ property.pricePerNight }}</p>
-  <p><b>Features:</b> {{ property.features }}</p>
-  <p><b>Rating:</b> ⭐ {{ property.rating }}</p>
 
-  <!-- ✅ Carousel -->
-  <div id="propertyCarousel" class="carousel slide mb-4" *ngIf="images.length > 0">
-    <div class="carousel-inner">
-      <div *ngFor="let img of images; let i = index" class="carousel-item" [class.active]="i === 0">
-        <img [src]="img" class="d-block w-100" style="height: 400px; object-fit: cover;">
+
+  <h2 class="fw-bold text-center mb-4">{{ property.title }}</h2>
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <div id="propertyCarousel" class="carousel slide shadow rounded" data-bs-ride="carousel" *ngIf="images.length > 0">
+        <div class="carousel-inner">
+          <div *ngFor="let img of images; let i = index" 
+               class="carousel-item" 
+               [class.active]="i === 0">
+            <img [src]="img" 
+                 class="d-block w-100 rounded" 
+                 alt="Property Image {{ i + 1 }}"
+                 style="height: 420px; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button *ngFor="let img of images; let i = index"
+                  type="button"
+                  data-bs-target="#propertyCarousel"
+                  [attr.data-bs-slide-to]="i"
+                  [class.active]="i === 0"
+                  [attr.aria-label]="'Slide ' + (i + 1)">
+          </button>
+        </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
+
+    
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h4 class="card-title mb-3">🏡 Details</h4>
+          <p><b>📍 Location:</b> {{ property.location }}</p>
+          <p><b>🏷 Type:</b> {{ property.type }}</p>
+          <p><b>💰 Price/night:</b> <span class="fw-bold text-success">₹{{ property.pricePerNight }}</span></p>
+          <p><b>✨ Features:</b> {{ property.features }}</p>
+          <p><b>⭐ Rating:</b> {{ property.rating }}</p>
+        </div>
+      </div>
+
+      <div class="card shadow-sm border-0 mt-3">
+        <div class="card-body">
+          <h5 class="card-title">📅 Reserve This Property</h5>
+          <label class="form-label">Check-in Date:</label>
+          <input type="date" [(ngModel)]="checkIn" class="form-control mb-2">
+
+          <label class="form-label">Check-out Date:</label>
+          <input type="date" [(ngModel)]="checkOut" class="form-control mb-3">
+
+          <button class="btn btn-success w-100" (click)="reserveProperty()">✅ Reserve Now</button>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- ✅ Reservation Form -->
-  <div class="mt-4">
-    <label>Check-in Date:</label>
-    <input type="date" [(ngModel)]="checkIn" class="form-control mb-2">
 
-    <label>Check-out Date:</label>
-    <input type="date" [(ngModel)]="checkOut" class="form-control mb-3">
-
-    <button class="btn btn-success" (click)="reserveProperty()">Reserve Now</button>
+  <div class="mt-5">
+    <h4 class="mb-3">💬 Contact Owner</h4>
+    <app-message-user [propertyId]="property.propertyId"></app-message-user>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+

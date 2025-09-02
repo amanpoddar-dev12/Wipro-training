@@ -29,6 +29,7 @@ export class PropertyDetailsComponent implements OnInit {
           this.property = res;
           if (this.property.images) {
             this.images = this.property.images.split(',').map((i: string) => i.trim());
+            console.log(this.images);
           }
         },
         error: (err) => console.error('Failed to load property', err)
