@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using RentAPlaceAPI.Data;
 using RentAPlaceAPI.Models;
 using System.Security.Claims;
+using RentAPlaceAPI.Services; // Add this if EmailService is in the Services folder/namespace
 
 namespace RentAPlaceAPI.Controllers
 {
@@ -21,8 +22,10 @@ namespace RentAPlaceAPI.Controllers
 
         // ✅ Reserve a property
         [HttpPost]
-        [AllowAnonymous]
-        public async Task<IActionResult> Reserve([FromBody] ReservationDto dto)
+        [Authorize] // ✅ only logged-in users can reserve
+        public async Task<IActionResult> Reserve(
+       [FromBody] ReservationDto dto,
+       [FromServices] EmailService emailService)
         {
             if (!ModelState.IsValid)
             {
@@ -35,8 +38,12 @@ namespace RentAPlaceAPI.Controllers
                 if (userId == 0)
                     return Unauthorized(new { message = "User not logged in" });
 
-                var propertyExists = await _context.Properties.AnyAsync(p => p.PropertyId == dto.PropertyId);
-                if (!propertyExists)
+                // ✅ Load property and owner
+                var property = await _context.Properties
+                    .Include(p => p.Owner)
+                    .FirstOrDefaultAsync(p => p.PropertyId == dto.PropertyId);
+
+                if (property == null)
                     return BadRequest(new { message = "Invalid PropertyId" });
 
                 if (dto.CheckIn >= dto.CheckOut)
@@ -55,15 +62,32 @@ namespace RentAPlaceAPI.Controllers
                 _context.Reservations.Add(reservation);
                 await _context.SaveChangesAsync();
 
+                // ✅ Send email notification to owner
+                if (!string.IsNullOrEmpty(property.Owner.Email))
+                {
+                    string subject = $"New Reservation Request for {property.Title}";
+                    string body = $@"
+                <h3>Hello {property.Owner.Name},</h3>
+                <p>A new reservation has been made for your property <b>{property.Title}</b>.</p>
+                <p><b>Check-In:</b> {dto.CheckIn:yyyy-MM-dd}</p>
+                <p><b>Check-Out:</b> {dto.CheckOut:yyyy-MM-dd}</p>
+                <p>Status: Pending</p>
+                <br>
+                <p>Regards,<br/>RentAPlace Team</p>";
+
+                    await emailService.SendEmailAsync(property.Owner.Email, subject, body);
+                }
+
                 return Ok(new { message = "Reservation created successfully!", reservation });
             }
             catch (Exception ex)
             {
-                Console.WriteLine("❌ Reservation Save Error: " + ex.ToString()); // log full exception
+                Console.WriteLine("❌ Reservation Save Error: " + ex);
                 return StatusCode(500, new { message = "Server error", error = ex.Message });
             }
-
         }
+
+
 
 
 
