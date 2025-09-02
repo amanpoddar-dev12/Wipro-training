@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { NotificationComponent } from '../../shared/notification/notification.component';
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: 'app-register',
@@ -18,8 +20,8 @@ export class RegisterComponent {
 
   apiUrl = 'http://localhost:5101/api/auth/register';
 
-  constructor(private http: HttpClient, private router: Router) {}
-
+  constructor(private http: HttpClient, private router: Router,private notify: NotificationService) {}
+    @ViewChild('notifier') notifier!: NotificationComponent;
   register() {
     const body = {
       name: this.name,
@@ -30,12 +32,17 @@ export class RegisterComponent {
 
     this.http.post(this.apiUrl, body).subscribe({
       next: (res) => {
-        alert('✅ Registered successfully! Now you can login.');
-        this.router.navigate(['/home']);
+       this.notify.show(`✅ Welcome !`, 'success');
+      this.router.navigate(['/home']);
+          
       },
       error: (err) => {
         alert('❌ Registration failed: ' + (err.error || err.message));
       }
     });
+
   }
+   goToLogin() {
+  this.router.navigate(['/login']);
+}
 }

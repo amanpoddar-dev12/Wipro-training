@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { SelectedPropertiesService } from '../../services/selected-properties.service';
@@ -14,7 +14,9 @@ export class SelectedPropertiesComponent implements OnInit {
   selected: any[] = [];
 
   constructor(private selectedService: SelectedPropertiesService) {}
-
+ 
+  
+  
   ngOnInit(): void {
     this.selected = this.selectedService.getProperties();
   }

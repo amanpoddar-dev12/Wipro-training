@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MessageUserComponent } from '../message-user/message-user.component';
+import { NotificationService } from '../../services/notification.service';
+import { NotificationComponent } from '../../shared/notification/notification.component';
 
 @Component({
   selector: 'app-property-details',
@@ -18,8 +20,8 @@ export class PropertyDetailsComponent implements OnInit {
   checkIn: string = '';
   checkOut: string = '';
   apiUrl = 'http://localhost:5101/api/properties';
-
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+    @ViewChild('notifier') notifier!: NotificationComponent;
+  constructor(private route: ActivatedRoute, private http: HttpClient,private notify: NotificationService) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -39,7 +41,7 @@ export class PropertyDetailsComponent implements OnInit {
 
 reserveProperty() {
   if (!this.checkIn || !this.checkOut) {
-    alert('❌ Please select check-in and check-out dates');
+    this.notify.show('❌ Please select check-in and check-out dates', 'error');
     return;
   }
 
@@ -55,8 +57,9 @@ reserveProperty() {
 this.http.post('http://localhost:5101/api/reservations', reservation, {
   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
 }).subscribe({
-  next: (res: any) => {
-    alert(res.message || '✅ Reservation created successfully!');
+  next: () => {
+    this.notify.show('✅ Reservation created successfully!', 'success');
+    // alert(res.message || '✅ Reservation created successfully!');
   },
   error: (err) => {
     console.error("❌ Reservation error:", err);
