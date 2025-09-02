@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-my-reservations',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule, RouterLink],
   templateUrl: './my-reservations.component.html',
   styleUrls: ['./my-reservations.component.css']
 })
@@ -16,9 +17,17 @@ export class MyReservationsComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>(this.apiUrl).subscribe({
-      next: (res) => (this.reservations = res),
-      error: (err) => console.error('Failed to load reservations', err)
+    this.http.get<any[]>(this.apiUrl, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+    }).subscribe({
+      next: (res) => {
+        console.log('✅ Reservations:', res);
+        this.reservations = res;
+      },
+      error: (err) => {
+        console.error('❌ Failed to load reservations', err);
+        alert(err.error?.message || 'Failed to load reservations');
+      }
     });
   }
 }

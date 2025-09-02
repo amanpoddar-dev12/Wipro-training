@@ -1,0 +1,50 @@
+<div class="container mt-5">
+  <h2 class="text-center">🏠 My Properties</h2>
+
+  <!-- Add Property Form -->
+  <div class="card p-3 mb-4">
+    <h4>Add New Property</h4>
+    <form (ngSubmit)="addProperty()">
+      <input class="form-control mb-2" placeholder="Title" [(ngModel)]="newProperty.title" name="title">
+      <textarea class="form-control mb-2" placeholder="Description" [(ngModel)]="newProperty.description" name="description"></textarea>
+      <input class="form-control mb-2" placeholder="Type (e.g., Villa)" [(ngModel)]="newProperty.type" name="type">
+      <input class="form-control mb-2" placeholder="Location" [(ngModel)]="newProperty.location" name="location">
+      <input class="form-control mb-2" placeholder="Features" [(ngModel)]="newProperty.features" name="features">
+      <input class="form-control mb-2" type="number" placeholder="Price Per Night" [(ngModel)]="newProperty.pricePerNight" name="pricePerNight">
+      <input class="form-control mb-2" placeholder="Images (comma-separated URLs)" [(ngModel)]="newProperty.images" name="images">
+      <button class="btn btn-success">Add Property</button>
+    </form>
+  </div>
+
+  <!-- List of Properties -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let prop of properties">
+      <div class="card shadow-sm mb-3">
+        <img [src]="prop.images?.split(',')[0] || 'https://via.placeholder.com/400x200'" 
+             class="card-img-top" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">{{ prop.title }}</h5>
+          <p>{{ prop.location }}</p>
+          <p>₹{{ prop.pricePerNight }}</p>
+          <button class="btn btn-primary btn-sm" (click)="editProperty(prop)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteProperty(prop.propertyId)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Form -->
+  <div *ngIf="editingProperty" class="card p-3 mt-4">
+    <h4>Edit Property</h4>
+    <form (ngSubmit)="updateProperty()">
+      <input class="form-control mb-2" [(ngModel)]="editingProperty.title" name="editTitle">
+      <textarea class="form-control mb-2" [(ngModel)]="editingProperty.description" name="editDescription"></textarea>
+      <input class="form-control mb-2" [(ngModel)]="editingProperty.type" name="editType">
+      <input class="form-control mb-2" [(ngModel)]="editingProperty.location" name="editLocation">
+      <input class="form-control mb-2" [(ngModel)]="editingProperty.features" name="editFeatures">
+      <input class="form-control mb-2" type="number" [(ngModel)]="editingProperty.pricePerNight" name="editPrice">
+      <input class="form-control mb-2" [(ngModel)]="editingProperty.images" name="editImages">
+      <button class="btn btn-success">Update Property</button>
+    </form>
+  </div>
+</div>

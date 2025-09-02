@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <h2 class="text-center">📨 Inbox</h2>
+
+  <div *ngIf="messages.length === 0" class="alert alert-info text-center">
+    No messages yet.
+  </div>
+
+  <div *ngFor="let msg of messages" class="card mb-3">
+    <div class="card-body">
+       
+      <h5 class="card-title">Property: {{ msg.property?.title }}</h5>
+      <p><b>From:</b> {{ msg.fromUser?.name }} ({{ msg.fromUser?.email }})</p>
+      <p><b>Message:</b> {{ msg.content }}</p>
+      <small class="text-muted">{{ msg.createdAt | date:'short' }}</small>
+       
+      
+      <div class="mt-2">
+        <textarea class="form-control mb-2" [(ngModel)]="replyContent[msg.messageId]" placeholder="Write a reply..."></textarea>
+        <button class="btn btn-primary btn-sm" (click)="sendReply(msg.messageId)">Reply</button>
+      </div>
+    </div>
+  </div>
+</div>

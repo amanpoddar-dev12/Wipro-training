@@ -18,6 +18,30 @@ namespace RentAPlaceAPI.Controllers
             _context = context;
         }
 
+        [HttpGet("my")]
+        [Authorize(Roles = "Owner,Admin,User")]
+        public async Task<IActionResult> GetMyProperties()
+        {
+            try
+            {
+                var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (string.IsNullOrEmpty(userIdClaim))
+                    return Unauthorized(new { message = "User not found in token" });
+
+                var userId = int.Parse(userIdClaim);
+
+                var myProps = await _context.Properties
+                    .Where(p => p.OwnerId == userId)
+                    .ToListAsync();
+
+                return Ok(myProps);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = "Failed to fetch properties", error = ex.Message });
+            }
+        }
+
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> GetProperties()
@@ -39,7 +63,6 @@ namespace RentAPlaceAPI.Controllers
         }
 
 
-        // ✅ Only Owner/Admin can add
         [HttpPost]
         [Authorize(Roles = "Owner,Admin")]
         public async Task<IActionResult> AddProperty(Property property)

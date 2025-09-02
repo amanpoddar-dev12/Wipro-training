@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h2 class="text-center">📨 My Messages</h2>
+
+  <div *ngIf="messages.length === 0" class="alert alert-info text-center">
+    No messages yet.
+  </div>
+
+  <div *ngFor="let msg of messages" class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Property: {{ msg.property?.title }}</h5>
+      <p><b>From:</b> {{ msg.fromUser?.name }} (Owner)</p>
+      <p><b>Message:</b> {{ msg.content }}</p>
+      <small class="text-muted">{{ msg.createdAt | date:'short' }}</small>
+    </div>
+  </div>
+</div>

@@ -9,20 +9,25 @@
     </ng-container>
 
     <ng-template #loggedInMenu>
-      <!-- Show different links based on role -->
+   
        <li class="nav-item"><a class="nav-link" routerLink="/search">Search</a></li>
       <li class="nav-item"><a class="nav-link" routerLink="/selected-properties">Selected</a></li>
 
-      <li class="nav-item" *ngIf="authService.getRole() === 'Admin'">
-        <a class="nav-link" routerLink="/admin-dashboard">Admin Dashboard</a>
+      <li class="nav-item"><a class="nav-link" *ngIf="authService.getRole() === 'User'" routerLink="/user-inbox">User Inbox</a></li>
+
+        <li class="nav-item"><a class="nav-link" *ngIf="authService.getRole() === 'Owner'" routerLink="/owner-inbox">Owner Inbox</a></li>
+
+         <li class="nav-item" *ngIf="authService.getRole() === 'User'">
+        <a class="nav-link" routerLink="/my-reservations">Reservation</a>
+      </li>
+ 
+      <li class="nav-item" *ngIf="authService.getRole() === 'Owner'">
+        <a class="nav-link" routerLink="/owner-reservations">Reservations</a>
+      </li>
+        <li class="nav-item" *ngIf="authService.getRole() === 'Owner'">
+        <a class="nav-link" routerLink="/my-properties">My Properties</a>
       </li>
 
-      <li class="nav-item" *ngIf="authService.getRole() === 'Owner'">
-        <a class="nav-link" routerLink="/owner-dashboard">Owner Dashboard</a>
-      </li>
-      <li class="nav-item" *ngIf="authService.getRole() === 'User'">
-        <a class="nav-link" routerLink="/properties">Browse Properties</a>
-      </li>
       <li class="nav-item"><a class="nav-link" (click)="logout()">Logout</a></li>
     </ng-template>
   </ul>

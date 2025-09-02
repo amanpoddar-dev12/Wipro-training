@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <h2 class="text-center">📌 Reservations for My Properties</h2>
+
+  <div *ngIf="reservations.length === 0" class="alert alert-info text-center">
+    No reservations yet.
+  </div>
+
+  <table *ngIf="reservations.length > 0" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>User</th>
+        <th>Check-In</th>
+        <th>Check-Out</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of reservations">
+        <td>{{ r.property?.title }}</td>
+        <td>{{ r.user?.name }} ({{ r.user?.email }})</td>
+        <td>{{ r.checkIn | date }}</td>
+        <td>{{ r.checkOut | date }}</td>
+        <td>
+          <span class="badge bg-info">{{ r.status }}</span>
+        </td>
+        <td>
+          <button class="btn btn-success btn-sm me-2" (click)="updateStatus(r.reservationId, 'Confirmed')">Confirm</button>
+          <button class="btn btn-danger btn-sm" (click)="updateStatus(r.reservationId, 'Rejected')">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

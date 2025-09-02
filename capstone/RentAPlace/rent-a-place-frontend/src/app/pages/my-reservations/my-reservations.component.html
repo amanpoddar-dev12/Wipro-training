@@ -1,22 +1,24 @@
 <div class="container mt-5">
-  <h2>My Reservations</h2>
-  <table class="table table-bordered mt-3" *ngIf="reservations.length > 0">
-    <thead>
-      <tr>
-        <th>Property</th>
-        <th>Check-In</th>
-        <th>Check-Out</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let r of reservations">
-        <td>{{ r.property?.title }}</td>
-        <td>{{ r.checkIn | date }}</td>
-        <td>{{ r.checkOut | date }}</td>
-        <td>{{ r.status }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <p *ngIf="reservations.length === 0">No reservations found.</p>
+  <h2 class="text-center">📌 My Reservations</h2>
+
+  <div *ngIf="reservations.length === 0" class="alert alert-info text-center">
+    You have no reservations yet.
+  </div>
+
+  <div class="row mt-4" *ngIf="reservations.length > 0">
+    <div class="col-md-4" *ngFor="let r of reservations">
+      <div class="card shadow-sm mb-3">
+        <img [src]="r.property?.images?.split(',')[0] || 'https://via.placeholder.com/400x200'" 
+             class="card-img-top" style="height: 200px; object-fit: cover;" alt="Property image">
+        <div class="card-body">
+          <h5 class="card-title">{{ r.property?.title }}</h5>
+          <p class="card-text">{{ r.property?.location }}</p>
+          <p><b>Check-in:</b> {{ r.checkIn | date }}</p>
+          <p><b>Check-out:</b> {{ r.checkOut | date }}</p>
+          <p><span class="badge bg-info">{{ r.status }}</span></p>
+          <a [routerLink]="['/property', r.propertyId]" class="btn btn-primary btn-sm">View Property</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -25,6 +25,7 @@ export class LoginComponent {
     this.http.post<any>(this.apiUrl, body).subscribe({
       next: (res) => {
         this.authService.setSession(res.token, res.role, res.name);
+          localStorage.setItem('token', res.token);
         alert(`✅ Welcome ${res.name}!`);
         this.router.navigate(['/dashboard']);
       },

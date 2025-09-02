@@ -9,6 +9,7 @@ namespace RentAPlaceAPI.Models
         public string Content { get; set; } = string.Empty;
         public DateTime SentAt { get; set; } = DateTime.Now;
 
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
         // Navigation
         public User? FromUser { get; set; }
         public User? ToUser { get; set; }

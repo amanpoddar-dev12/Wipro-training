@@ -3,16 +3,17 @@ import { HttpInterceptorFn } from '@angular/common/http';
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const token = localStorage.getItem('token');
 
-  // ✅ List of public endpoints
+  // ✅ Only these are public
   const publicEndpoints = [
+    '/api/auth/login',
+    '/api/auth/register',
     '/api/properties/top-rated',
     '/api/properties/search',
-    '/api/properties',         // general list
-    '/api/properties/'         // single property by id
+    '/api/properties' // ONLY the list of all properties
   ];
 
-  // Check if the request matches a public endpoint
-  const isPublic = publicEndpoints.some(url => req.url.includes(url));
+  // Check exact matches (not "includes")
+  const isPublic = publicEndpoints.some(url => req.url.endsWith(url));
 
   if (token && !isPublic) {
     const cloned = req.clone({
@@ -21,6 +22,5 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
     return next(cloned);
   }
 
-  // For public requests → no token
   return next(req);
 };
