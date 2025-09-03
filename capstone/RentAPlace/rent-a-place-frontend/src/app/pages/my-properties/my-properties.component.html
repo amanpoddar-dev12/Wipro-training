@@ -11,7 +11,8 @@
       <input class="form-control mb-2" placeholder="Location" [(ngModel)]="newProperty.location" name="location">
       <input class="form-control mb-2" placeholder="Features" [(ngModel)]="newProperty.features" name="features">
       <input class="form-control mb-2" type="number" placeholder="Price Per Night" [(ngModel)]="newProperty.pricePerNight" name="pricePerNight">
-      <input class="form-control mb-2" placeholder="Images (comma-separated URLs)" [(ngModel)]="newProperty.images" name="images">
+      <input class="form-control mb-2" type="file" multiple (change)="onFileSelected($event)">
+
       <button class="btn btn-success">Add Property</button>
     </form>
   </div>
@@ -43,7 +44,8 @@
       <input class="form-control mb-2" [(ngModel)]="editingProperty.location" name="editLocation">
       <input class="form-control mb-2" [(ngModel)]="editingProperty.features" name="editFeatures">
       <input class="form-control mb-2" type="number" [(ngModel)]="editingProperty.pricePerNight" name="editPrice">
-      <input class="form-control mb-2" [(ngModel)]="editingProperty.images" name="editImages">
+      <input class="form-control mb-2" type="file" multiple (change)="onEditFilesSelected($event)">
+
       <button class="btn btn-success">Update Property</button>
     </form>
   </div>

@@ -170,3 +170,4 @@ C:\Users\HP\Desktop\Wipro-training\capstone\RentAPlace\RentAPlaceAPI\obj\Debug\n
 C:\Users\HP\Desktop\Wipro-training\capstone\RentAPlace\RentAPlaceAPI\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
 C:\Users\HP\Desktop\Wipro-training\capstone\RentAPlace\RentAPlaceAPI\bin\Debug\net9.0\MailKit.dll
 C:\Users\HP\Desktop\Wipro-training\capstone\RentAPlace\RentAPlaceAPI\bin\Debug\net9.0\MimeKit.dll
+C:\Users\HP\Desktop\Wipro-training\capstone\RentAPlace\RentAPlaceAPI\bin\Debug\net9.0\RentAPlaceAPI.staticwebassets.runtime.json

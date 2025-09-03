@@ -30,10 +30,10 @@ login() {
       this.authService.setSession(res.token, res.role, res.name);
       localStorage.setItem('token', res.token);
       this.router.navigate(["/home"]);
-      this.notify.show(`✅ Welcome ${res.name}!`, 'success');
+      this.notify.show(`✅ Welcome ${res.name}!`, 'success', '');
     },
     error: (err) => {
-      this.notify.show('❌ Login failed: ' + (err.error || err.message), 'error');
+      this.notify.show('❌ Login failed: ' + (err.error || err.message), 'error', '');
     }
   });
 }

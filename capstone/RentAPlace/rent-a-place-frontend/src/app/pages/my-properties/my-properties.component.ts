@@ -13,6 +13,7 @@ import { RouterLink } from '@angular/router';
 })
 export class MyPropertiesComponent implements OnInit {
   properties: any[] = [];
+  selectedFiles: File[] = [];
   newProperty: any = {
     title: '',
     description: '',
@@ -47,35 +48,77 @@ export class MyPropertiesComponent implements OnInit {
 }
 
 
-  addProperty() {
+ onFileSelected(event: any) {
+  this.selectedFiles = Array.from(event.target.files);
+}
+
+uploadImages(): Promise<string[]> {
+  return new Promise((resolve, reject) => {
+    if (this.selectedFiles.length === 0) return resolve([]);
+
+    const formData = new FormData();
+    this.selectedFiles.forEach(file => formData.append('files', file));
+
+    this.http.post<string[]>(`${this.apiUrl}/upload-images`, formData, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+    }).subscribe({
+      next: (res) => resolve(res),
+      error: (err) => reject(err)
+    });
+  });
+}
+
+async addProperty() {
+  try {
+    const uploadedUrls = await this.uploadImages();
+    this.newProperty.images = uploadedUrls.join(',');
+
     this.http.post(this.apiUrl, this.newProperty, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
     }).subscribe({
       next: () => {
         alert('✅ Property added!');
         this.newProperty = { title: '', description: '', type: '', location: '', features: '', pricePerNight: 0, images: '' };
+        this.selectedFiles = [];
         this.loadMyProperties();
       },
       error: (err) => alert('❌ Failed: ' + (err.error?.message || err.message))
     });
+  } catch (err) {
+    alert('❌ Image upload failed.');
   }
+}
 
   editProperty(prop: any) {
     this.editingProperty = { ...prop };
   }
 
-  updateProperty() {
+  async updateProperty() {
+  try {
+    const uploadedUrls = await this.uploadEditImages();
+
+    if (uploadedUrls.length > 0) {
+     
+      this.editingProperty.images = uploadedUrls.join(',');
+
+    }
+
     this.http.put(`${this.apiUrl}/${this.editingProperty.propertyId}`, this.editingProperty, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
     }).subscribe({
       next: () => {
-        alert('✅ Property updated!');
+        alert('✅ Property updated with new images!');
         this.editingProperty = null;
+        this.editSelectedFiles = [];
         this.loadMyProperties();
       },
       error: (err) => alert('❌ Failed: ' + (err.error?.message || err.message))
     });
+  } catch (err) {
+    alert('❌ Image upload failed.');
   }
+}
+
 
   deleteProperty(id: number) {
     if (!confirm('Are you sure?')) return;
@@ -89,4 +132,28 @@ export class MyPropertiesComponent implements OnInit {
       error: (err) => alert('❌ Failed: ' + (err.error?.message || err.message))
     });
   }
+  editSelectedFiles: File[] = [];
+
+onEditFilesSelected(event: any) {
+  this.editSelectedFiles = Array.from(event.target.files);
+}
+
+uploadEditImages(): Promise<string[]> {
+  return new Promise((resolve, reject) => {
+    if (this.editSelectedFiles.length === 0) return resolve([]);
+
+    const formData = new FormData();
+    this.editSelectedFiles.forEach(file => formData.append('files', file));
+
+    this.http.post<string[]>(`${this.apiUrl}/upload-images`, formData, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+    }).subscribe({
+      next: (res) => resolve(res),
+      error: (err) => reject(err)
+    });
+  });
+}
+
+
+  
 }

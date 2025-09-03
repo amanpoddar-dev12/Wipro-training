@@ -147,6 +147,7 @@ namespace RentAPlaceAPI.Controllers
         }
 
 
+
         [HttpGet("search")]
         [AllowAnonymous]
         public async Task<IActionResult> Search(
@@ -200,6 +201,41 @@ namespace RentAPlaceAPI.Controllers
                 return BadRequest(new { message = "Search failed", error = ex.Message });
             }
         }
+
+
+
+
+        [HttpPost("upload-images")]
+        [Authorize(Roles = "Owner,Admin")]
+        public async Task<IActionResult> UploadImages([FromForm] List<IFormFile> files)
+        {
+            if (files == null || files.Count == 0)
+                return BadRequest("No files uploaded.");
+
+            var uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "properties");
+            if (!Directory.Exists(uploadPath))
+                Directory.CreateDirectory(uploadPath);
+
+            var imageUrls = new List<string>();
+            foreach (var file in files)
+            {
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                var filePath = Path.Combine(uploadPath, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+
+
+                var baseUrl = $"{Request.Scheme}://{Request.Host}";
+                imageUrls.Add($"{baseUrl}/uploads/properties/{fileName}");
+            }
+
+            return Ok(imageUrls);
+        }
+
+
 
     }
 }

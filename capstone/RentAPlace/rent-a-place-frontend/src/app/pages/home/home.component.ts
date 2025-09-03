@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
 selectProperty(property: any) {
   this.selectedService.addProperty(property);
-   this.notify.show(`${property.title} added to selected list✅!`, 'success');
+   this.notify.show(`${property.title} added to selected list✅!`, 'success', '');
 }
    showTop = false;
   

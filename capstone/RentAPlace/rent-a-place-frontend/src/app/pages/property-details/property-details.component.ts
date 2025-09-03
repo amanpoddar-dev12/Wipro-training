@@ -41,7 +41,7 @@ export class PropertyDetailsComponent implements OnInit {
 
 reserveProperty() {
   if (!this.checkIn || !this.checkOut) {
-    this.notify.show('❌ Please select check-in and check-out dates', 'error');
+    this.notify.show('❌ Please select check-in and check-out dates', 'error', '');
     return;
   }
 
@@ -58,7 +58,7 @@ this.http.post('http://localhost:5101/api/reservations', reservation, {
   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
 }).subscribe({
   next: () => {
-    this.notify.show('✅ Reservation created successfully!', 'success');
+    this.notify.show('✅ Reservation created successfully!', 'success', '');
     // alert(res.message || '✅ Reservation created successfully!');
   },
   error: (err) => {

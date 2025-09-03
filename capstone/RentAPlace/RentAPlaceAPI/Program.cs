@@ -73,10 +73,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// ✅ Use Angular-only policy during development
-// Switch to "AllowAll" for testing/deployment if needed
 app.UseCors("AllowAngularApp");
-// app.UseCors("AllowAll");  // uncomment this line for global access
+
+app.UseStaticFiles();
 
 app.UseAuthentication();
 app.UseAuthorization();

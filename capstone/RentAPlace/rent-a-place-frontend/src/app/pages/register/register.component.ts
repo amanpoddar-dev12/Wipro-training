@@ -32,7 +32,7 @@ export class RegisterComponent {
 
     this.http.post(this.apiUrl, body).subscribe({
       next: (res) => {
-       this.notify.show(`✅ Welcome !`, 'success');
+       this.notify.show(`✅ Welcome !`, 'success', '');
       this.router.navigate(['/home']);
           
       },
