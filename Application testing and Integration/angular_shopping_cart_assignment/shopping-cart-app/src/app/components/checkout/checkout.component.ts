@@ -1,0 +1,1 @@
+// Placeholder for src/app/components/checkout/checkout.component.ts

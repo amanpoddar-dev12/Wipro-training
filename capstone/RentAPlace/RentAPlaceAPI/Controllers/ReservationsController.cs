@@ -20,9 +20,9 @@ namespace RentAPlaceAPI.Controllers
             _context = context;
         }
 
-        // ✅ Reserve a property
+        //  Reserve a property
         [HttpPost]
-        [Authorize] // ✅ only logged-in users can reserve
+        [Authorize] //  only logged-in users can reserve
         public async Task<IActionResult> Reserve(
        [FromBody] ReservationDto dto,
        [FromServices] EmailService emailService)
@@ -38,7 +38,7 @@ namespace RentAPlaceAPI.Controllers
                 if (userId == 0)
                     return Unauthorized(new { message = "User not logged in" });
 
-                // ✅ Load property and owner
+                //  Load property and owner
                 var property = await _context.Properties
                     .Include(p => p.Owner)
                     .FirstOrDefaultAsync(p => p.PropertyId == dto.PropertyId);
@@ -62,7 +62,7 @@ namespace RentAPlaceAPI.Controllers
                 _context.Reservations.Add(reservation);
                 await _context.SaveChangesAsync();
 
-                // ✅ Send email notification to owner
+                //  Send email notification to owner
                 if (!string.IsNullOrEmpty(property.Owner.Email))
                 {
                     string subject = $"New Reservation Request for {property.Title}";

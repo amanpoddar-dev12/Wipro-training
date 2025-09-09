@@ -75,7 +75,7 @@ namespace RentAPlaceAPI.Controllers
             return Ok(property);
         }
 
-        // ✅ Only Owner/Admin can update
+        //  Only Owner/Admin can update
         [HttpPut("{id}")]
         [Authorize(Roles = "Owner,Admin")]
         public async Task<IActionResult> UpdateProperty(int id, Property updated)
@@ -100,7 +100,7 @@ namespace RentAPlaceAPI.Controllers
             return Ok(property);
         }
 
-        // ✅ Only Owner/Admin can delete
+        //  Only Owner/Admin can delete
         [HttpDelete("{id}")]
         [Authorize(Roles = "Owner,Admin")]
         public async Task<IActionResult> DeleteProperty(int id)
@@ -117,7 +117,7 @@ namespace RentAPlaceAPI.Controllers
             return Ok(new { message = "Property deleted" });
         }
 
-        // ✅ Public: Top-rated properties
+        //  Public: Top-rated properties
         [HttpGet("top-rated")]
         [AllowAnonymous]
         public async Task<IActionResult> GetTopRated()
@@ -160,7 +160,7 @@ namespace RentAPlaceAPI.Controllers
             try
             {
                 var query = _context.Properties
-                    .Include(p => p.Reservations) // ✅ include reservations
+                    .Include(p => p.Reservations) //  include reservations
                     .AsQueryable();
 
                 if (!string.IsNullOrWhiteSpace(location))
@@ -172,7 +172,7 @@ namespace RentAPlaceAPI.Controllers
                 if (!string.IsNullOrWhiteSpace(features))
                     query = query.Where(p => p.Features != null && p.Features.Contains(features));
 
-                // ✅ Filter by availability (exclude properties already reserved in the date range)
+                //  Filter by availability (exclude properties already reserved in the date range)
                 if (checkIn.HasValue && checkOut.HasValue)
                 {
                     query = query.Where(p => !p.Reservations.Any(r =>

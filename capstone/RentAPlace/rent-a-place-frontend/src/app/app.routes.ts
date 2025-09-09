@@ -17,7 +17,7 @@ import { UserInboxComponent } from './pages/user-inbox/user-inbox.component';
 import { OwnerInboxComponent } from './pages/owner-inbox/owner-inbox.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' }, // ✅ redirect root to home
+  { path: '', redirectTo: 'home', pathMatch: 'full' }, 
   { path: 'home', component: HomeComponent, canActivate: [authGuard] },
 
   { path: 'login', component: LoginComponent },
@@ -34,5 +34,5 @@ export const routes: Routes = [
   { path: 'user-inbox', component: UserInboxComponent, canActivate: [authGuard] },
   { path: 'owner-inbox', component: OwnerInboxComponent, canActivate: [authGuard] },
 
-  { path: '**', redirectTo: 'login' } // fallback
+  { path: '**', redirectTo: 'login' } 
 ];

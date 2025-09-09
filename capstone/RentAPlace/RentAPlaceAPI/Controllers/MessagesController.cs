@@ -19,7 +19,7 @@ namespace RentAPlaceAPI.Controllers
             _context = context;
         }
 
-        // ✅ User sends a message to the owner of a property
+        //  User sends a message to the owner of a property
         [HttpPost("send")]
         [Authorize(Roles = "User,Admin")]
         public async Task<IActionResult> SendMessage([FromBody] Message dto)
@@ -45,7 +45,7 @@ namespace RentAPlaceAPI.Controllers
             return Ok(new { message = "Message sent!", data = message });
         }
 
-        // ✅ Owner sees all messages from users
+        //  Owner sees all messages from users
         [HttpGet("inbox")]
         [Authorize(Roles = "Owner,Admin")]
         public async Task<IActionResult> Inbox()
@@ -62,7 +62,7 @@ namespace RentAPlaceAPI.Controllers
             return Ok(messages);
         }
 
-        // ✅ Owner replies to user
+        //  Owner replies to user
         [HttpPost("reply/{messageId}")]
         [Authorize(Roles = "Owner,Admin")]
         public async Task<IActionResult> Reply(int messageId, [FromBody] string content)
